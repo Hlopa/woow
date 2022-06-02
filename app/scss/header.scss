@@ -1,0 +1,47 @@
+.header {
+  background-color: transparent;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  transition: all 0.5s;
+}
+
+
+.header.active {
+  background-color: #fff;
+
+  .header__menu-link {
+    color: #000
+  }
+
+  svg path {
+    fill: #000;
+  }
+
+}
+
+.header_logo{
+  margin-top: 10px;
+}
+
+.header_inner {
+  display: flex;
+  justify-content: space-between;
+  padding: 32px 0px 22px;
+  align-items: center;
+
+}
+
+.header__menu-list {
+  display: flex;
+}
+
+.header__menu-item:not(:last-child) {
+  margin-right: 32px;
+}
+
+.header__menu-link {
+  color: #fff;
+  font-family: 'inter-semi-bold';
+  font-size: 14px;
+}

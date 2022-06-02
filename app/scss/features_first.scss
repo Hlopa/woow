@@ -1,0 +1,126 @@
+.features_first {
+  background-color: #ffbccf;
+  position: relative;
+}
+.features_first-cat{
+  position: absolute;
+  right:0;
+  top: 68px;
+  z-index: 10;
+}
+
+.features_first-cat-eye{
+  position: absolute;
+  left:90.6%;
+  top: 22%;
+  z-index: 12;
+}
+
+.features_first-cat-eye-lines{
+  position: absolute;
+  right:5px;
+  top: 23%;
+  z-index: 11;
+  width: 329px;
+  height: 274px;
+
+}
+
+
+
+.features_first-inner {
+  padding-top: 64px;
+  padding-bottom: 82px;
+}
+
+.features_first-mainTitle{
+ margin-right: -11px;
+ position: relative;
+ z-index: 20;
+}
+
+.features_first-content{
+  display: flex;
+  margin-bottom: 51px;
+}
+
+.features_first-list{
+  flex-basis: 56%;
+  margin-top: -10px;
+}
+
+.features_first-list-item:not(:last-child){
+  margin-bottom: 36px;
+}
+
+.features_first-list-item:nth-child(2){
+  padding-right: 25px;
+}
+
+.features_first-list-item:nth-child(3){
+  padding-right: 40px;
+  .features_first-title{
+      width: 60%;
+  }
+}
+
+.features_first-title {
+  font-family: 'inter-Black';
+  font-size: 48px;
+  line-height: 104%;
+  margin-bottom: 8px;
+  text-transform: capitalize;
+}
+
+.features_first-link{
+  font-size: 12px;
+  a{
+    color: #1967FF
+  }
+}
+
+.features_first-images{
+  position: relative;
+  width: 575px;
+  height: 521px;
+}
+
+.features_first-images-shrimp{
+  position: absolute;
+  top: -10px;
+  left: 42%;
+  transform: translateX(-50%);
+}
+
+.features_first-images-salmon{
+  position: absolute;
+  top: 45%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+
+.features_first-images-rabbit{
+  position: absolute;
+  bottom: 20px;
+  right: 32px;
+}
+
+.features_first-images-tuna{
+  position: absolute;
+  bottom: 32px;
+  left: 39px;
+}
+
+.features_first-images-chicken{
+  position: absolute;
+  top: 38%;
+  left: -12px;
+  transform: translateY(-50%);
+}
+
+.features_first-images-turkey{
+  position: absolute;
+  top: 55%;
+  left: 48%;
+  transform: translate(-50%, -50%);
+}
