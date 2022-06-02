@@ -71,6 +71,7 @@
     width: 100%;
     display: block;
     margin-top: auto;
+    margin-bottom: 40px;
   }
 
   .header.active {
@@ -225,14 +226,4 @@
     }
   }
 
-  // .header__menu-item.burger::after {
-  //   content: '';
-  //   background-image: url(../images/emogi/cat.png);
-  //   position: absolute;
-  //   left: 0;
-  //   top: 0;
-  //   width: 15px;
-  //   height: 15px;
-
-  // }
 }

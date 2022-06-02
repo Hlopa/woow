@@ -2,7 +2,7 @@ html {
   box-sizing: border-box;
 }
 
-body{
+body {
   font-family: 'inter';
   position: relative;
   overflow-x: hidden;
@@ -14,7 +14,12 @@ body{
   box-sizing: inherit;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
   padding: 0;
 }
@@ -48,51 +53,56 @@ img {
   margin: 0 auto;
 }
 
-// .flex{
-//   display: flex;
-// }
-
-.flex30{
+.flex30 {
   flex-basis: 30%;
 }
 
-.taC{
+.taC {
   text-align: center;
 }
 
-.taR{
+.taR {
   text-align: right;
 }
 
 //Buttons
 
-.btn_main{
-background-color: $orange;
-border-radius: 100px;
-border: none;
-color: #fff;
-text-transform: uppercase;
-padding: 16px 53px;
-font-size: 20px;
-font-family: 'inter-bold';
-cursor: pointer;
-transition: all 0.3s;
-box-shadow: 0px 8px 20px 0px rgba($color: $orange, $alpha: 0.5);
+.btn_main {
+  background-color: $orange;
+  border-radius: 100px;
+  border: none;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 16px 53px;
+  font-size: 20px;
+  font-family: 'inter-bold';
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0px 8px 20px 0px rgba($color: $orange, $alpha: 0.5);
 }
 
-.btn_main:hover{
-  background-color:#f7cc53;
+.btn_main:hover {
+  background-color: #f7cc53;
 }
 
-.btn_main-big{
+.btn_main-big {
   padding: 23px 53px 24px;
 }
 
 
 //Text
 
-.descr{
+.descr {
   font-size: 20px;
   line-height: 140%;
 
+}
+
+//===========================600px=============================//
+
+@media (max-width: 600px) {
+
+  .container {
+    padding: 0px 24px;
+  }
 }
