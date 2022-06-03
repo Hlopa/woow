@@ -92,6 +92,11 @@ img {
 
 //Text
 
+.hidden_title {
+  color: transparent;
+  font-size: 0;
+}
+
 .descr {
   font-size: 20px;
   line-height: 140%;
@@ -106,7 +111,7 @@ img {
     padding: 0px 24px;
   }
 
-  .descr{
+  .descr {
     font-size: 16px;
     line-height: 150%;
   }

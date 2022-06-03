@@ -1,0 +1,20 @@
+.features_second{
+  background-color: $yellowBg;
+  padding-top: 90px;
+  padding-bottom: 81px;
+}
+
+.features_second-title{
+  text-align: center;
+}
+
+.features_second-main{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.features_second-main-imgColumn{
+  margin-right: 60px;
+  flex-shrink: 0;
+}

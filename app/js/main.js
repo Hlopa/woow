@@ -6,6 +6,47 @@ document.addEventListener("DOMContentLoaded", () => {
     $('.header').toggleClass("active", $(this).scrollTop() > 200);
   });
 
+  //slider
+  $('.reviews-slider').slick({
+    slidesToShow: 3.4,
+    slidesToScroll: 1,
+    arrows: false,
+    dots: false,
+    infinite: true,
+    autoplay: true,
+    speed: 8000,
+    autoplaySpeed: 0,
+    cssEase: "linear",
+    accessibility: false,
+    responsive: [
+      {
+        breakpoint: 1380,
+        settings: {
+          slidesToShow: 2,
+        }
+      },
+      {
+        breakpoint: 800,
+        settings: {
+          slidesToShow: 1.5,
+        }
+      },
+      {
+        breakpoint: 620,
+        settings: {
+          slidesToShow: 1,
+        }
+      },
+      {
+        breakpoint: 400,
+        settings: {
+          slidesToShow: 0.7,
+        }
+      },
+    ]
+  });
+
+
 
   setInterval(() => {
     //скролл и анимация
