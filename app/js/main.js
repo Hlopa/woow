@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     $('.header').toggleClass("active", $(this).scrollTop() > 200);
   });
 
-  //slider
+  //sliders
   $('.reviews-slider').slick({
     slidesToShow: 3.4,
     slidesToScroll: 1,
@@ -44,6 +44,78 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       },
     ]
+  });
+
+  $('.tastes_slider').slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    arrows: true,
+    dots: false,
+    infinite: false,
+    prevArrow: '<div class="arrow arrow-left"><img class="slider-arrows slider-arrows__left tastes-slider-arrows" src="images/tastes/prev-arrow.svg" alt=""></img></div>',
+    nextArrow: '<div class="arrow arrow-right"><img class="slider-arrows slider-arrows__right tastes-slider-arrows" src="images/tastes/next-arrow.svg" alt=""></img></div>',
+    // responsive: [
+    //   {
+    //     breakpoint: 1380,
+    //     settings: {
+    //       slidesToShow: 2,
+    //     }
+    //   },
+    //   {
+    //     breakpoint: 800,
+    //     settings: {
+    //       slidesToShow: 1.5,
+    //     }
+    //   },
+    //   {
+    //     breakpoint: 620,
+    //     settings: {
+    //       slidesToShow: 1,
+    //     }
+    //   },
+    //   {
+    //     breakpoint: 400,
+    //     settings: {
+    //       slidesToShow: 0.7,
+    //     }
+    //   },
+    // ]
+  });
+
+  $('.main-tastes-slider').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true,
+    dots: true,
+    infinite: false,
+    // prevArrow: '<div class="arrow arrow-left"><img class="slider-arrows slider-arrows__left tastes-slider-arrows" src="images/tastes/prev-arrow.svg" alt=""></img></div>',
+    // nextArrow: '<div class="arrow arrow-right"><img class="slider-arrows slider-arrows__right tastes-slider-arrows" src="images/tastes/next-arrow.svg" alt=""></img></div>',
+    // responsive: [
+    //   {
+    //     breakpoint: 1380,
+    //     settings: {
+    //       slidesToShow: 2,
+    //     }
+    //   },
+    //   {
+    //     breakpoint: 800,
+    //     settings: {
+    //       slidesToShow: 1.5,
+    //     }
+    //   },
+    //   {
+    //     breakpoint: 620,
+    //     settings: {
+    //       slidesToShow: 1,
+    //     }
+    //   },
+    //   {
+    //     breakpoint: 400,
+    //     settings: {
+    //       slidesToShow: 0.7,
+    //     }
+    //   },
+    // ]
   });
 
 

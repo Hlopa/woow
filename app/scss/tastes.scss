@@ -1,0 +1,141 @@
+.tastes {
+  background-color: #EBEBEB;
+  padding-top: 80px;
+  padding-bottom: 100px;
+  text-align: center;
+}
+
+.tastes_title {
+  font-size: 56px;
+  font-family: 'inter-Black';
+  margin-bottom: 100px;
+}
+
+.tastes_slider-item-inner {
+  position: relative;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0px 2px 30px rgba(0, 0, 0, 0.1);
+  padding: 16px 16px 24px 16px;
+  margin-right: 20px;
+}
+
+.slick-slide .tastes_slider-item-inner::after{
+  position: absolute;
+  content: '';
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 20px;
+  opacity: 1;
+}
+
+.slick-active .tastes_slider-item-inner::after{
+ opacity: 0;
+}
+
+.tastes_slider-item-img {
+  margin-bottom: 20px;
+  height: 146px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+.tastes-reviews {
+  display: flex;
+  align-items: center;
+  margin-bottom: 9px;
+}
+
+.tastes-reviews_number {
+  margin-left: 8px;
+  font-size: 12px;
+  
+
+  span {
+    font-family: 'inter-bold';
+  }
+}
+
+.tastes_name {
+  font-size: 20px;
+  line-height: 150%;
+  letter-spacing: -0.01em;
+  font-family: 'inter-bold';
+  margin-bottom: 3px;
+}
+
+.tastes-info-weight {
+  font-size: 14px;
+  font-family: 'inter-bold';
+  margin-bottom: 3px;
+}
+
+.tastes-info-for {
+  color: #585858;
+  margin-bottom: 9px;
+}
+
+.tastes_descr {
+  font-size: 14px;
+  line-height: 143%;
+  margin-bottom: 9px;
+
+  span {
+    font-family: 'inter-bold';
+  }
+}
+
+.tastes_price {
+  display: flex;
+  align-items: center;
+}
+
+.tastes_price-text {
+  font-family: 'inter-bold';
+  margin-right: 4px;
+}
+
+.tastes_price-number {
+  color: $orange;
+  font-size: 24px;
+  font-family: 'inter-bold';
+  margin-left: 4px;
+}
+
+.tastes_price-divider {
+  flex-grow: 1;
+  height: 1px;
+  background-color: #CECECE;
+}
+
+
+.tastes_slider {
+  position: relative;
+  margin-bottom: 50px;
+  z-index: 39;
+  .slick-list {
+    overflow: visible;
+  }
+}
+
+.tastes-slider-arrows {
+  cursor: pointer;
+  z-index: 41;
+  position: absolute;
+  top: 50%
+}
+
+.slider-arrows__right.tastes-slider-arrows{
+  right: -35px;
+}
+
+.slider-arrows__left.tastes-slider-arrows{
+  left: -50px;
+}
