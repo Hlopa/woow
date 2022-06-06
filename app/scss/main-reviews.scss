@@ -14,7 +14,7 @@
   margin-bottom: 52px;
 }
 
-.main-tastes-name{
+.main-tastes-name {
   font-size: 26px;
   font-family: 'inter-bold';
   margin-bottom: 8px;
@@ -88,11 +88,11 @@
     }
 
     .slick-active {
-        button {
-          width: 12px;
-          height: 12px;
-          background-color: $green;
-        }
+      button {
+        width: 12px;
+        height: 12px;
+        background-color: $green;
+      }
     }
   }
 }
@@ -165,23 +165,105 @@
 }
 
 
-.main-reviews-reviews-slider-item_inner{
+.main-reviews-reviews-slider-item_inner {
   display: flex;
   align-items: flex-end;
 }
 
-.main-reviews-reviews-title{
+.main-reviews-reviews-title {
   font-size: 20px;
   font-family: 'inter-semi-bold';
   margin-bottom: 20px;
 }
 
-.main-reviews-reviews_avatar{
+.main-reviews-reviews_avatar {
   width: 90px;
   height: 90px;
   object-fit: cover;
 }
 
-.main-reviews-reviews{
+.main-reviews-reviews {
   padding-bottom: 80px;
 }
+
+.main-reviews-reviews_replica-mob{
+  display: none !important;
+}
+
+
+//===================1230px====================//
+
+
+@media (max-width: 1230px) {
+  .main-reviews-tastes-column {
+    display: none;
+  }
+  .main-reviews-reviews-column{
+     flex-basis: 100%;
+  }
+}
+
+
+//======================970px==========================//
+
+@media (max-width: 970px) {
+  .main-reviews-title {
+    
+    font-size: 28px;
+    width: 100%;
+    width: 85%;
+    margin-bottom: 36px;
+  }
+}
+
+
+//=========================600px==============================//
+
+@media (max-width: 600px) {
+  .main-reviews{
+    padding-top: 40px;
+  }
+  .main-reviews-reviews {
+    padding-bottom: 40px;
+}
+.main-reviews-reviews-title{
+  display: none;
+}
+.main-reviews-reviews_avatar{
+  width: 40px;
+  height: 40px;
+}
+.main-reviews-reviews_replica-mob{
+  display: block !important;
+}
+
+.main-reviews-reviews_replica-deck{
+  display: none !important;
+}
+}
+
+
+//===============================410px==========================//
+
+@media (max-width: 410px) {
+  .main-reviews-reviews_replica-mob{
+    margin-left: -11px;
+  }
+  .main-reviews-reviews_avatar{
+width: 32px;
+height: 32px;
+  }
+  .main-reviews-title{
+width: 100%;
+  }
+}
+
+//=================================370px========================//
+
+
+@media (max-width: 370px) {
+  .main-reviews-reviews-slider{
+    margin-left: -20px;
+  }
+}
+

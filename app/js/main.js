@@ -55,32 +55,32 @@ document.addEventListener("DOMContentLoaded", () => {
     infinite: false,
     prevArrow: '<div class="arrow arrow-left"><img class="slider-arrows slider-arrows__left tastes-slider-arrows" src="images/tastes/prev-arrow.svg" alt=""></img></div>',
     nextArrow: '<div class="arrow arrow-right"><img class="slider-arrows slider-arrows__right tastes-slider-arrows" src="images/tastes/next-arrow.svg" alt=""></img></div>',
-    // responsive: [
-    //   {
-    //     breakpoint: 1380,
-    //     settings: {
-    //       slidesToShow: 2,
-    //     }
-    //   },
-    //   {
-    //     breakpoint: 800,
-    //     settings: {
-    //       slidesToShow: 1.5,
-    //     }
-    //   },
-    //   {
-    //     breakpoint: 620,
-    //     settings: {
-    //       slidesToShow: 1,
-    //     }
-    //   },
-    //   {
-    //     breakpoint: 400,
-    //     settings: {
-    //       slidesToShow: 0.7,
-    //     }
-    //   },
-    // ]
+    responsive: [
+      {
+        breakpoint: 1290,
+        settings: {
+          slidesToShow: 3,
+          arrows: false,
+          dots: true,
+        }
+      },
+      {
+        breakpoint: 970,
+        settings: {
+          slidesToShow: 2,
+          arrows: false,
+          dots: true,
+        }
+      },
+      {
+        breakpoint: 690,
+        settings: {
+          slidesToShow: 1,
+          arrows: false,
+          dots: true,
+        }
+      },
+    ]
   });
 
   $('.main-tastes-slider').slick({
@@ -91,32 +91,6 @@ document.addEventListener("DOMContentLoaded", () => {
     infinite: false,
     prevArrow: '<div class="arrow arrow-left"><img class="slider-arrows slider-arrows__left reviews-slider-arrows" src="images/tastes/prev-arrow.svg" alt=""></img></div>',
     nextArrow: '<div class="arrow arrow-right"><img class="slider-arrows slider-arrows__right reviews-slider-arrows" src="images/tastes/next-arrow.svg" alt=""></img></div>',
-    // responsive: [
-    //   {
-    //     breakpoint: 1380,
-    //     settings: {
-    //       slidesToShow: 2,
-    //     }
-    //   },
-    //   {
-    //     breakpoint: 800,
-    //     settings: {
-    //       slidesToShow: 1.5,
-    //     }
-    //   },
-    //   {
-    //     breakpoint: 620,
-    //     settings: {
-    //       slidesToShow: 1,
-    //     }
-    //   },
-    //   {
-    //     breakpoint: 400,
-    //     settings: {
-    //       slidesToShow: 0.7,
-    //     }
-    //   },
-    // ]
   });
 
   $('.main-reviews-reviews-slider').slick({
@@ -126,37 +100,12 @@ document.addEventListener("DOMContentLoaded", () => {
     dots: false,
     vertical: true,
     infinite: true,
-    // autoplay: true,
+    autoplay: true,
     autoplaySpeed: 3000,
     cssEase: "linear",
     accessibility: false,
     pauseOnHover: false,
-    // responsive: [
-    //   {
-    //     breakpoint: 1380,
-    //     settings: {
-    //       slidesToShow: 2,
-    //     }
-    //   },
-    //   {
-    //     breakpoint: 800,
-    //     settings: {
-    //       slidesToShow: 1.5,
-    //     }
-    //   },
-    //   {
-    //     breakpoint: 620,
-    //     settings: {
-    //       slidesToShow: 1,
-    //     }
-    //   },
-    //   {
-    //     breakpoint: 400,
-    //     settings: {
-    //       slidesToShow: 0.7,
-    //     }
-    //   },
-    // ]
+
   });
 
 
