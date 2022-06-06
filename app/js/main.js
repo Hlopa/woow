@@ -126,7 +126,7 @@ document.addEventListener("DOMContentLoaded", () => {
     dots: false,
     vertical: true,
     infinite: true,
-    autoplay: true,
+    // autoplay: true,
     autoplaySpeed: 3000,
     cssEase: "linear",
     accessibility: false,

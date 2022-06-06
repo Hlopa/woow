@@ -3,21 +3,68 @@
   padding-top: 80px;
   padding-bottom: 100px;
   text-align: center;
+  background-image: url(../images/tastes/big-cat.png);
+  background-repeat: no-repeat;
+  background-position: center right;
+  position: relative;
+  z-index: 80;
 }
+
+.tastes-schrimp{
+  position: absolute;
+  left: 68px;
+  top: 13%;
+  z-index: 77;
+}
+
+.tastes-chicken{
+  position: absolute;
+  left: 67%;
+  bottom: 15%;
+  z-index: 76;
+}
+
+.tastes-tuna{
+  position: absolute;
+  left: 3%;
+  bottom: 6%;
+  z-index: 78;
+}
+
+.tastes-salmon{
+  position: absolute;
+  left: 63%;
+  top: 15%;
+  z-index: 79;
+}
+
+
+.tastes-replica{
+  position: absolute;
+  right: 135px;
+  top: 60px;
+  animation: roteto3 3s infinite;
+  z-index: 85;
+}
+
 
 .tastes_title {
   font-size: 56px;
   font-family: 'inter-Black';
-  margin-bottom: 100px;
+  margin-bottom: 95px;
+  position: relative;
+  z-index: 81;
 }
+
 
 .tastes_slider-item-inner {
   position: relative;
   background-color: #fff;
   border-radius: 20px;
   box-shadow: 0px 2px 30px rgba(0, 0, 0, 0.1);
-  padding: 16px 16px 24px 16px;
-  margin-right: 20px;
+  padding: 16px 14px 28px 18px;
+  margin-right: 24px;
+  text-align: left;
 }
 
 .slick-slide .tastes_slider-item-inner::after{
@@ -37,9 +84,8 @@
 }
 
 .tastes_slider-item-img {
-  margin-bottom: 20px;
+  margin-bottom: 14px;
   height: 146px;
-
   img {
     width: 100%;
     height: 100%;
@@ -85,7 +131,7 @@
 .tastes_descr {
   font-size: 14px;
   line-height: 143%;
-  margin-bottom: 9px;
+  margin-bottom: 17px;
 
   span {
     font-family: 'inter-bold';
@@ -119,7 +165,7 @@
 .tastes_slider {
   position: relative;
   margin-bottom: 50px;
-  z-index: 39;
+  z-index: 82;
   .slick-list {
     overflow: visible;
   }
@@ -129,13 +175,29 @@
   cursor: pointer;
   z-index: 41;
   position: absolute;
-  top: 50%
+  top: 46%
 }
 
 .slider-arrows__right.tastes-slider-arrows{
-  right: -35px;
+  right: -33px;
 }
 
 .slider-arrows__left.tastes-slider-arrows{
-  left: -50px;
+  left: -55px;
+}
+
+
+@keyframes roteto3 {
+  0% {
+    transform: rotate(0deg);
+    transform-origin: bottom right;
+  }
+  50% {
+    transform: rotate(15deg);
+    transform-origin: bottom right;
+  }
+  100% {
+    transform: rotate(0deg);
+    transform-origin: bottom right;
+  }
 }

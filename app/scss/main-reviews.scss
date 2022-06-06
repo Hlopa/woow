@@ -7,10 +7,17 @@
   text-align: center;
   font-size: 56px;
   line-height: 107%;
-  margin-bottom: 52px;
   font-family: "inter-Black";
-  margin-bottom: 52px;
   text-transform: capitalize;
+  width: 85%;
+  margin: 0px auto;
+  margin-bottom: 52px;
+}
+
+.main-tastes-name{
+  font-size: 26px;
+  font-family: 'inter-bold';
+  margin-bottom: 8px;
 }
 
 .main-reviews-reviews {
@@ -33,15 +40,6 @@
   flex-shrink: 0;
 }
 
-.main-reviews-slider-tasts-item {
-  .tastes_slider-item-inner {
-    box-shadow: none;
-  }
-}
-
-.slick-slide .main-reviews-slider-tasts-item .tastes_slider-item-inner::after {
-  display: none;
-}
 
 .main-reviews-tastes-column {
   padding: 13px 32px 40px 32px;
@@ -66,7 +64,7 @@
 
   .slick-dots {
     position: absolute;
-    top: 47%;
+    top: 43%;
     display: flex;
     left: 50%;
     transform: translateX(-50%);
@@ -120,7 +118,7 @@
 
 .main-tastes-slider-item-info-for {
   color: #585858;
-  margin-right: 8px;
+  margin-right: 12px;
 }
 
 .main-tastes-slider-item-info-weight {
@@ -129,8 +127,8 @@
 }
 
 .main-tastes-slider-item-descr {
-  font-size: 14px;
-  line-height: 143%;
+  font-size: 20px;
+  line-height: 140%;
   margin-bottom: 32px;
 
   span {
@@ -140,7 +138,7 @@
 
 .reviews-slider-arrows {
   position: absolute;
-  top: 20%;
+  top: 22%;
   cursor: pointer;
   transition: all 0.5s;
   z-index: 70;
@@ -162,9 +160,10 @@
 }
 
 .main-tastes-slider-item {
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
+
 
 .main-reviews-reviews-slider-item_inner{
   display: flex;
