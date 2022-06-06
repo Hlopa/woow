@@ -17,6 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
     speed: 8000,
     autoplaySpeed: 0,
     cssEase: "linear",
+    pauseOnHover: false,
     accessibility: false,
     responsive: [
       {
@@ -88,8 +89,8 @@ document.addEventListener("DOMContentLoaded", () => {
     arrows: true,
     dots: true,
     infinite: false,
-    // prevArrow: '<div class="arrow arrow-left"><img class="slider-arrows slider-arrows__left tastes-slider-arrows" src="images/tastes/prev-arrow.svg" alt=""></img></div>',
-    // nextArrow: '<div class="arrow arrow-right"><img class="slider-arrows slider-arrows__right tastes-slider-arrows" src="images/tastes/next-arrow.svg" alt=""></img></div>',
+    prevArrow: '<div class="arrow arrow-left"><img class="slider-arrows slider-arrows__left reviews-slider-arrows" src="images/tastes/prev-arrow.svg" alt=""></img></div>',
+    nextArrow: '<div class="arrow arrow-right"><img class="slider-arrows slider-arrows__right reviews-slider-arrows" src="images/tastes/next-arrow.svg" alt=""></img></div>',
     // responsive: [
     //   {
     //     breakpoint: 1380,
@@ -117,6 +118,48 @@ document.addEventListener("DOMContentLoaded", () => {
     //   },
     // ]
   });
+
+  $('.main-reviews-reviews-slider').slick({
+    slidesToShow: 4,
+    slidesToScroll: -1,
+    arrows:false,
+    dots: false,
+    vertical: true,
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    cssEase: "linear",
+    accessibility: false,
+    pauseOnHover: false,
+    // responsive: [
+    //   {
+    //     breakpoint: 1380,
+    //     settings: {
+    //       slidesToShow: 2,
+    //     }
+    //   },
+    //   {
+    //     breakpoint: 800,
+    //     settings: {
+    //       slidesToShow: 1.5,
+    //     }
+    //   },
+    //   {
+    //     breakpoint: 620,
+    //     settings: {
+    //       slidesToShow: 1,
+    //     }
+    //   },
+    //   {
+    //     breakpoint: 400,
+    //     settings: {
+    //       slidesToShow: 0.7,
+    //     }
+    //   },
+    // ]
+  });
+
+
 
 
 
