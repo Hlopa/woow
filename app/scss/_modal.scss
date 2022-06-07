@@ -10,7 +10,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
   pointer-events: none;
   opacity: 0;
   z-index: 999;
@@ -22,14 +21,8 @@
     text-align: center;
     width: 70%;
     margin: 0px auto;
-
-    /* Black */
-
     color: #000000;
-
   }
-
-  // modal__link
   &__link {
     display: flex;
     justify-content: center;
@@ -59,8 +52,6 @@
   font-family: 'inter-extra-bold';
   font-size: 16px;
 }
-
-.btn {}
 
 .btn--close-modal {
   position: absolute;
