@@ -5,15 +5,14 @@
   require 'phpmailer/src/Exception.php';
   require 'phpmailer/src/PHPMailer.php';
 
+
   $mail = new PHPMailer(true);
   $mail->CharSet = 'UTF-8';
   $mail->setLanguage('ru', 'phpmailer/language/');
   $mail->IsHTML(true);
 
-  //От кого письмо
-  $mail->setFrom('Woow.holistic');
   //Кому отправить
-  $mail->addAddress('bariolga@yandex.ru')
+  $mail->addAddress('test@mail.ru');
   //Тема письма
   $mail->Subject = 'Форма обратной связи с Woow.holistic';
 
@@ -33,7 +32,7 @@
   if(!$mail->send()){
     $message = 'Ошибка';
   } else {
-    $message = 'Данные отправлены!'
+    $message = 'Данные отправлены!';
   }
 
   $response = ['message' => $message];
