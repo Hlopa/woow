@@ -68,12 +68,12 @@
               </a>
             </li>
             <li class="header__menu-item burger">
-              <a href="#about" class="header__menu-link">
+              <a href="#" class="header__menu-link">
                 <div class="header__menu-item-inner"><span>История Илона Мяска</span></div>
               </a>
             </li>
           </ul>
-          <button class="btn_main burder-btn">Купить</button>
+          <button class="btn_main burder-btn btn--open-modal">Купить</button>
         </nav>
         <div class="flex30 taC header_logo">
           <svg width="120" height="46" viewBox="0 0 120 46" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -113,7 +113,7 @@
           </svg>
         </div>
         <div class="flex30 taR header_btn">
-          <button class="btn_main">Купить</button>
+          <button class="btn_main btn--open-modal">Купить</button>
         </div>
         <div class="menu-burge_root">
           <div class="header__menu-icon menu-burger">
@@ -137,7 +137,7 @@
             Натуральные корма WOOW.holistic на 90% состоят из органического мяса и рыбы human
             grade уровня
           </p>
-          <button class="btn_main btn_main-big first_screen-btn">Купить на маркетплейсе</button>
+          <button class="btn_main btn_main-big first_screen-btn btn--open-modal">Купить на маркетплейсе</button>
           <button class="btn_main btn_main-big first_screen-btn first_screen-btn-mobile">
             Купить
           </button>
@@ -332,9 +332,15 @@
         <div class="features_second-title">
           <img src="images/featuresSecond/title.svg" />
         </div>
+        <div class="features_second-title-mob">
+          <img src="images/featuresSecond/title-mob.svg" />
+        </div>
         <div class="features_second-main">
+          <img src="images/featuresSecond/catsWithArrows.png" class="features_second-crasyCats" />
           <div class="features_second-main-imgColumn">
             <img src="images/featuresSecond/cat.png" />
+            <img src="images/featuresSecond/eyes.png"
+              class="features_second-main-imgColumn-eye animate__pulse animate__animated animate__infinite animate__slow" />
           </div>
           <div class="features_second-main-textColumn">
             <ul class="features_first-list">
@@ -346,13 +352,36 @@
                   Помогает в пищеварении и предотвращает образование комков шерсти у кошек.
                   Использование кокосового масла улучшает состояние и блеск шерсти
                 </p>
+
               </li>
+
+              <li class="features_first-list-item mob">
+                <div class="catWithoutBerry">
+                  <div>
+                    <img src="images/featuresSecond/cocos.png" />
+                  </div>
+                  <div class="crazyCatCat">
+                    <img src="images/featuresSecond/catsWithArrows.png" />
+                  </div>
+                </div>
+              </li>
+
               <li class="features_first-list-item">
                 <h3 class="features_first-list-item-title features_first-title">Ягоды Годжи</h3>
                 <p class="descr">
                   Содержат натуральные витамины, минералы и антиоксиданты. Стимулируют и укрепляют
                   иммунную систему
                 </p>
+              </li>
+              <li class="features_first-list-item mob">
+                <div class="catWithoutBerry">
+                  <div>
+                    <img src="images/featuresSecond/berry.png" />
+                  </div>
+                  <div style="text-align: right">
+                    <img src="images/featuresSecond/cat-without-berry.png" />
+                  </div>
+                </div>
               </li>
             </ul>
           </div>
@@ -361,43 +390,58 @@
     </section>
 
     <section class="features_third">
+
       <h2 class="hidden_title">
         Woow корма натуральны по составу и приближены к естественному питанию в живой природе
       </h2>
       <div class="container">
-        <div class="features_third-title">
-          <img src="images/featuresThird/title.svg" />
-        </div>
-        <div class="features_third-main">
-          <div class="features_third-main-textColumn">
-            <ul>
-              <li class="features_third_item">
-                <div class="features_third_item-number">0%</div>
-                <p class="features_third_item-descr">
-                  углеводов, беззерновой - организм кошек не переваривает углеводы
-                </p>
-              </li>
-              <li class="features_third_item">
-                <div class="features_third_item-number">0%</div>
-                <p class="features_third_item-descr">искуственных консервантов</p>
-              </li>
-              <li class="features_third_item">
-                <div class="features_third_item-number">0%</div>
-                <p class="features_third_item-descr">ароматизаторов и усилителей вкуса</p>
-              </li>
-            </ul>
+
+        <div class="features_third_inner">
+          <div class="features_third-imgs">
+            <img src="images/tastes/chicken.png" class="features_third-imgs-chicken" />
+            <img src="images/tastes/salmon.png" class="features_third-imgs-salmon" />
+            <img src="images/tastes/shrimp.png" class="features_third-imgs-schrimp" />
+            <img src="images/footer-logo.svg" class="features_third-imgs-logo" />
           </div>
-          <div class="features_third-main-imgColumn">
-            <img src="images/featuresThird/cat.png" />
+          <img src="images/featuresThird/replica.svg" class="features_third-replica" />
+          <div class="features_third-title">
+            <img src="images/featuresThird/title.svg" />
+          </div>
+          <div class="features_third-title-mob">
+            <img src="images/featuresThird/title-mob.svg" />
+          </div>
+          <div class="features_third-main">
+            <div class="features_third-main-textColumn">
+              <ul>
+                <li class="features_third_item">
+                  <div class="features_third_item-number">0%</div>
+                  <p class="features_third_item-descr">
+                    углеводов, беззерновой - организм кошек не переваривает углеводы
+                  </p>
+                </li>
+                <li class="features_third_item">
+                  <div class="features_third_item-number">0%</div>
+                  <p class="features_third_item-descr">искуственных консервантов</p>
+                </li>
+                <li class="features_third_item">
+                  <div class="features_third_item-number">0%</div>
+                  <p class="features_third_item-descr">ароматизаторов и усилителей вкуса</p>
+                </li>
+              </ul>
+            </div>
+            <div class="features_third-main-imgColumn">
+              <img src="images/featuresThird/cat.png" />
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="tastes">
+    <section class="tastes" id='tastes'>
       <div class="tastes-replica">
         <img src="images/tastes/replica-big-cat.svg" />
       </div>
+
       <div class="tastes-bgImg">
         <div class="tastes-schrimp">
           <img src="images/tastes/shrimp.png" />
@@ -422,19 +466,21 @@
               </div>
               <div class="tastes-reviews">
                 <img src="images/tastes/five-stars.svg" />
-                <p class="tastes-reviews_number"><span>495</span> отзывов</p>
+                <!-- <p class="tastes-reviews_number"><span>495</span> отзывов</p> -->
               </div>
               <h3 class="tastes_name">Цыплёнок с лососем</h3>
               <p class="tastes-info-weight">100г</p>
               <p class="tastes-info-for">Для кошек всех возрастов</p>
               <p class="tastes_descr">
-                <span>Состав:</span> курица 70%, лосось 15%, ягоды годжи 1%, кокосовое масло
-                0,004%, растительный желатин, вода 9%
+                <span>Состав:</span> филе куриное, лосось, вода, ягоды годжи, желатин, кокосовое масло, витамины (А, Е, Д), микроэлементы, аминокислоты
               </p>
               <div class="tastes_price">
-                <p class="tastes_price-text">Цена</p>
+                <div class="tastes_price_inner">
+                  <p class="tastes_price-text">Цена</p>
                 <div class="tastes_price-divider"></div>
-                <p class="tastes_price-number">45.00₽</p>
+                <p class="tastes_price-number">170₽</p>
+                </div>
+                
               </div>
             </div>
           </article>
@@ -446,19 +492,20 @@
               </div>
               <div class="tastes-reviews">
                 <img src="images/tastes/five-stars.svg" />
-                <p class="tastes-reviews_number"><span>495</span> отзывов</p>
+                <!-- <p class="tastes-reviews_number"><span>495</span> отзывов</p> -->
               </div>
               <h3 class="tastes_name">Цыплёнок с креветкой</h3>
               <p class="tastes-info-weight">100г</p>
               <p class="tastes-info-for">Для кошек всех возрастов</p>
               <p class="tastes_descr">
-                <span>Состав:</span> курица 70%, лосось 15%, ягоды годжи 1%, кокосовое масло
-                0,004%, растительный желатин, вода 9%
+                <span>Состав:</span> филе куриное, креветка, вода, ягоды годжи, желатин, кокосовое масло, витамины (А, Е, Д), микроэлементы, аминокислоты
               </p>
               <div class="tastes_price">
-                <p class="tastes_price-text">Цена</p>
+                <div class="tastes_price_inner">
+                  <p class="tastes_price-text">Цена</p>
                 <div class="tastes_price-divider"></div>
-                <p class="tastes_price-number">45.00₽</p>
+                <p class="tastes_price-number">170₽</p>
+                </div>
               </div>
             </div>
           </article>
@@ -470,19 +517,18 @@
               </div>
               <div class="tastes-reviews">
                 <img src="images/tastes/five-stars.svg" />
-                <p class="tastes-reviews_number"><span>495</span> отзывов</p>
+                <!-- <p class="tastes-reviews_number"><span>495</span> отзывов</p> -->
               </div>
               <h3 class="tastes_name">Тунец с цыплёнком</h3>
               <p class="tastes-info-weight">100г</p>
               <p class="tastes-info-for">Для кошек всех возрастов</p>
               <p class="tastes_descr">
-                <span>Состав:</span> курица 70%, лосось 15%, ягоды годжи 1%, кокосовое масло
-                0,004%, растительный желатин, вода 9%
+                <span>Состав:</span> филе куриное, тунец, вода, ягоды годжи, желатин, кокосовое масло, витамины (А, Е, Д), микроэлементы, аминокислоты
               </p>
               <div class="tastes_price">
                 <p class="tastes_price-text">Цена</p>
                 <div class="tastes_price-divider"></div>
-                <p class="tastes_price-number">45.00₽</p>
+                <p class="tastes_price-number">170₽</p>
               </div>
             </div>
           </article>
@@ -490,23 +536,25 @@
           <article class="tastes_slider-item">
             <div class="tastes_slider-item-inner">
               <div class="tastes_slider-item-img">
-                <img src="images/tastes/1.png" />
+                <img src="images/tastes/4.png" />
               </div>
               <div class="tastes-reviews">
                 <img src="images/tastes/five-stars.svg" />
-                <p class="tastes-reviews_number"><span>495</span> отзывов</p>
+                <!-- <p class="tastes-reviews_number"><span>495</span> отзывов</p> -->
               </div>
               <h3 class="tastes_name">Индейка с телятиной</h3>
               <p class="tastes-info-weight">100г</p>
               <p class="tastes-info-for">Для кошек всех возрастов</p>
               <p class="tastes_descr">
-                <span>Состав:</span> курица 70%, лосось 15%, ягоды годжи 1%, кокосовое масло
-                0,004%, растительный желатин, вода 9%
+                <span>Состав:</span> филе индейки, телятина, вода, ягоды годжи, желатин, кокосовое масло, витамины (А, Е, Д), микроэлементы, аминокислоты
               </p>
               <div class="tastes_price">
-                <p class="tastes_price-text">Цена</p>
-                <div class="tastes_price-divider"></div>
-                <p class="tastes_price-number">45.00₽</p>
+                <div class="tastes_price_inner">
+                  <p class="tastes_price-text">Цена</p>
+                  <div class="tastes_price-divider"></div>
+                  <p class="tastes_price-number">170₽</p>
+                </div>
+
               </div>
             </div>
           </article>
@@ -514,23 +562,23 @@
           <article class="tastes_slider-item">
             <div class="tastes_slider-item-inner">
               <div class="tastes_slider-item-img">
-                <img src="images/tastes/1.png" />
+                <img src="images/tastes/5.png" />
               </div>
               <div class="tastes-reviews">
                 <img src="images/tastes/five-stars.svg" />
-                <p class="tastes-reviews_number"><span>495</span> отзывов</p>
+                <!-- <p class="tastes-reviews_number">отзывы</p> -->
               </div>
-              <h3 class="tastes_name">Цыплёнок с лососем</h3>
+              <h3 class="tastes_name">Индейка с кроликом</h3>
               <p class="tastes-info-weight">100г</p>
               <p class="tastes-info-for">Для кошек всех возрастов</p>
               <p class="tastes_descr">
-                <span>Состав:</span> курица 70%, лосось 15%, ягоды годжи 1%, кокосовое масло
-                0,004%, растительный желатин, вода 9%
+                <span>Состав:</span> филе индейки, кролик, вода, ягоды годжи, желатин, кокосовое масло, витамины (А, Е,
+                Д), микроэлементы, аминокислоты
               </p>
               <div class="tastes_price">
                 <p class="tastes_price-text">Цена</p>
                 <div class="tastes_price-divider"></div>
-                <p class="tastes_price-number">45.00₽</p>
+                <p class="tastes_price-number">170₽</p>
               </div>
             </div>
           </article>
@@ -538,28 +586,29 @@
           <article class="tastes_slider-item">
             <div class="tastes_slider-item-inner">
               <div class="tastes_slider-item-img">
-                <img src="images/tastes/1.png" />
+                <img src="images/tastes/6.png" />
               </div>
               <div class="tastes-reviews">
                 <img src="images/tastes/five-stars.svg" />
-                <p class="tastes-reviews_number"><span>495</span> отзывов</p>
+                <!-- <p class="tastes-reviews_number"><span>495</span> отзывов</p> -->
               </div>
-              <h3 class="tastes_name">Цыплёнок с лососем</h3>
+              <h3 class="tastes_name">Индейка со скумбрией</h3>
               <p class="tastes-info-weight">100г</p>
               <p class="tastes-info-for">Для кошек всех возрастов</p>
               <p class="tastes_descr">
-                <span>Состав:</span> курица 70%, лосось 15%, ягоды годжи 1%, кокосовое масло
-                0,004%, растительный желатин, вода 9%
+                <span>Состав:</span> филе индейки, скумбрия, вода, ягоды годжи, желатин, кокосовое масло, витамины (А, Е, Д), микроэлементы, аминокислоты
               </p>
               <div class="tastes_price">
-                <p class="tastes_price-text">Цена</p>
+                <div class="tastes_price_inner">
+                  <p class="tastes_price-text">Цена</p>
                 <div class="tastes_price-divider"></div>
-                <p class="tastes_price-number">45.00₽</p>
+                <p class="tastes_price-number">170₽</p>
+                </div>
               </div>
             </div>
           </article>
         </div>
-        <button class="btn_main btn_main-big">Купить на маркетплейсе</button>
+        <button class="btn_main btn_main-big btn--open-modal">Купить на маркетплейсе</button>
       </div>
     </section>
 
@@ -567,206 +616,210 @@
       <div class="container">
         <div class="main-reviews_inner">
 
-        
-        <div class="main-reviews-bg">
-          <img src="images/mainReviews/big-cat.png" class="big-cat"/>
-          <img src="images/mainReviews/replica-big-cat.svg" class="big-cat-replica"/>
-        </div>
-        <h2 class="main-reviews-title">Популярные отзывы хищников на корма WOOW.holistic</h2>
-        <div class="main-reviews-reviews">
-          <div class="main-reviews-tastes-column">
-            <div class="main-tastes-slider">
-              <article class="main-tastes-slider-item">
-                <div class="main-tastes-slider-inner">
-                  <div class="main-tastes-slider-item-img">
-                    <img src="images/tastes/1.png" />
-                    <div class="icon-info">
-                      <img src="images/mainReviews/icons-info.png" />
-                    </div>
-                  </div>
-                  <div class="tastes-reviews">
-                    <img src="images/tastes/five-stars.svg" />
-                    <p class="tastes-reviews_number"><span>495</span> отзывов</p>
-                  </div>
-                  <h3 class="main-tastes-name">Цыплёнок с лососем</h3>
-                  <div class="main-tastes-slider-item-info">
-                    <p class="main-tastes-slider-item-info-for">Для кошек всех возрастов</p>
-                    <p class="main-tastes-slider-item-info-weight">100г</p>
-                  </div>
-                  <p class="main-tastes-slider-item-descr">
-                    <span>Состав:</span> курица 70%, лосось 15%, ягоды годжи 1%, кокосовое масло
-                    0,004%, растительный желатин, вода 9%
-                  </p>
-                  <button class="btn_main btn_main-big w100">Купить (45₽)</button>
-                </div>
-              </article>
 
-              <article class="main-tastes-slider-item">
-                <div class="main-tastes-slider-inner">
-                  <div class="main-tastes-slider-item-img">
-                    <img src="images/tastes/2.png" />
-                    <div class="icon-info">
-                      <img src="images/mainReviews/icons-info.png" />
-                    </div>
-                  </div>
-                  <div class="tastes-reviews">
-                    <img src="images/tastes/five-stars.svg" />
-                    <p class="tastes-reviews_number"><span>495</span> отзывов</p>
-                  </div>
-                  <h3 class="main-tastes-name">Цыплёнок с креветкой</h3>
-                  <div class="main-tastes-slider-item-info">
-                    <p class="main-tastes-slider-item-info-for">Для кошек всех возрастов</p>
-                    <p class="main-tastes-slider-item-info-weight">100г</p>
-                  </div>
-                  <p class="main-tastes-slider-item-descr">
-                    <span>Состав:</span> курица 70%, лосось 15%, ягоды годжи 1%, кокосовое масло
-                    0,004%, растительный желатин, вода 9%
-                  </p>
-                  <button class="btn_main btn_main-big w100">Купить (45₽)</button>
-                </div>
-              </article>
-              <article class="main-tastes-slider-item">
-                <div class="main-tastes-slider-inner">
-                  <div class="main-tastes-slider-item-img">
-                    <img src="images/tastes/3.png" />
-                    <div class="icon-info">
-                      <img src="images/mainReviews/icons-info.png" />
-                    </div>
-                  </div>
-                  <div class="tastes-reviews">
-                    <img src="images/tastes/five-stars.svg" />
-                    <p class="tastes-reviews_number"><span>495</span> отзывов</p>
-                  </div>
-                  <h3 class="main-tastes-name">Тунец с цыплёнком</h3>
-                  <div class="main-tastes-slider-item-info">
-                    <p class="main-tastes-slider-item-info-for">Для кошек всех возрастов</p>
-                    <p class="main-tastes-slider-item-info-weight">100г</p>
-                  </div>
-                  <p class="main-tastes-slider-item-descr">
-                    <span>Состав:</span> курица 70%, лосось 15%, ягоды годжи 1%, кокосовое масло
-                    0,004%, растительный желатин, вода 9%
-                  </p>
-                  <button class="btn_main btn_main-big w100">Купить (45₽)</button>
-                </div>
-              </article>
-
-              <article class="main-tastes-slider-item">
-                <div class="main-tastes-slider-inner">
-                  <div class="main-tastes-slider-item-img">
-                    <img src="images/tastes/4.png" />
-                    <div class="icon-info">
-                      <img src="images/mainReviews/icons-info.png" />
-                    </div>
-                  </div>
-                  <div class="tastes-reviews">
-                    <img src="images/tastes/five-stars.svg" />
-                    <p class="tastes-reviews_number"><span>495</span> отзывов</p>
-                  </div>
-                  <h3 class="main-tastes-name">Индейка с телятиной</h3>
-                  <div class="main-tastes-slider-item-info">
-                    <p class="main-tastes-slider-item-info-for">Для кошек всех возрастов</p>
-                    <p class="main-tastes-slider-item-info-weight">100г</p>
-                  </div>
-                  <p class="main-tastes-slider-item-descr">
-                    <span>Состав:</span> курица 70%, лосось 15%, ягоды годжи 1%, кокосовое масло
-                    0,004%, растительный желатин, вода 9%
-                  </p>
-                  <button class="btn_main btn_main-big w100">Купить (45₽)</button>
-                </div>
-              </article>
-            </div>
+          <div class="main-reviews-bg">
+            <img src="images/mainReviews/big-cat.png" class="big-cat" />
+            <img src="images/mainReviews/replica-big-cat.svg" class="big-cat-replica" />
           </div>
+          <h2 class="main-reviews-title">Популярные отзывы хищников на корма WOOW.holistic</h2>
+          <div class="main-reviews-reviews">
+            <div class="main-reviews-tastes-column">
+              <div class="main-tastes-slider">
+                <article class="main-tastes-slider-item">
+                  <div class="main-tastes-slider-inner">
+                    <div class="main-tastes-slider-item-img">
+                      <img src="images/tastes/1.png" />
+                      <div class="icon-info">
+                        <img src="images/mainReviews/icons-info.png" />
+                      </div>
+                    </div>
+                    <!-- <div class="tastes-reviews">
+                      <img src="images/tastes/five-stars.svg" />
+                      <p class="tastes-reviews_number"><span>495</span> отзывов</p>
+                    </div> -->
+                    <h3 class="main-tastes-name">Цыплёнок с лососем</h3>
+                    <div class="main-tastes-slider-item-info">
+                      <p class="main-tastes-slider-item-info-for">Для кошек всех возрастов</p>
+                      <p class="main-tastes-slider-item-info-weight">100г</p>
+                    </div>
+                    <p class="main-tastes-slider-item-descr">
+                      <span>Состав:</span> филе куриное, лосось, вода, ягоды годжи, желатин, кокосовое масло, витамины (А, Е, Д), микроэлементы, аминокислоты
+                    </p>
+                    <button class="btn_main btn_main-big w100">Купить (170₽)</button>
+                  </div>
+                </article>
 
-          <div class="main-reviews-reviews-column">
-            <p class="main-reviews-reviews-title">Армия котиков-ботиков</p>
-            <div class="main-reviews-reviews-slider">
-              <div class="main-reviews-reviews-slider-item">
-                <div class="main-reviews-reviews-slider-item_inner">
-                  <img src="images/mainReviews/cat1.png" class="main-reviews-reviews_avatar" />
-                  <img src="images/mainReviews/replica1.svg" class='main-reviews-reviews_replica-deck' />
-                  <img src="images/mainReviews/replica-1-mob.svg" class='main-reviews-reviews_replica-mob' />
-                </div>
+                <article class="main-tastes-slider-item">
+                  <div class="main-tastes-slider-inner">
+                    <div class="main-tastes-slider-item-img">
+                      <img src="images/tastes/2.png" />
+                      <div class="icon-info">
+                        <img src="images/mainReviews/icons-info.png" />
+                      </div>
+                    </div>
+                    <!-- <div class="tastes-reviews">
+                      <img src="images/tastes/five-stars.svg" />
+                      <p class="tastes-reviews_number"><span>495</span> отзывов</p>
+                    </div> -->
+                    <h3 class="main-tastes-name">Цыплёнок с креветкой</h3>
+                    <div class="main-tastes-slider-item-info">
+                      <p class="main-tastes-slider-item-info-for">Для кошек всех возрастов</p>
+                      <p class="main-tastes-slider-item-info-weight">100г</p>
+                    </div>
+                    <p class="main-tastes-slider-item-descr">
+                      <span>Состав:</span> филе куриное, креветка, вода, ягоды годжи, желатин, кокосовое масло, витамины (А, Е, Д), микроэлементы, аминокислоты
+                    </p>
+                    <button class="btn_main btn_main-big w100">Купить (170₽)</button>
+                  </div>
+                </article>
+                <article class="main-tastes-slider-item">
+                  <div class="main-tastes-slider-inner">
+                    <div class="main-tastes-slider-item-img">
+                      <img src="images/tastes/3.png" />
+                      <div class="icon-info">
+                        <img src="images/mainReviews/icons-info.png" />
+                      </div>
+                    </div>
+                    <!-- <div class="tastes-reviews">
+                      <img src="images/tastes/five-stars.svg" />
+                      <p class="tastes-reviews_number"><span>495</span> отзывов</p>
+                    </div> -->
+                    <h3 class="main-tastes-name">Тунец с цыплёнком</h3>
+                    <div class="main-tastes-slider-item-info">
+                      <p class="main-tastes-slider-item-info-for">Для кошек всех возрастов</p>
+                      <p class="main-tastes-slider-item-info-weight">100г</p>
+                    </div>
+                    <p class="main-tastes-slider-item-descr">
+                      <span>Состав:</span> филе куриное, тунец, вода, ягоды годжи, желатин, кокосовое масло, витамины (А, Е, Д), микроэлементы, аминокислоты
+                    </p>
+                    <button class="btn_main btn_main-big w100">Купить (170₽)</button>
+                  </div>
+                </article>
+
+                <article class="main-tastes-slider-item">
+                  <div class="main-tastes-slider-inner">
+                    <div class="main-tastes-slider-item-img">
+                      <img src="images/tastes/4.png" />
+                      <div class="icon-info">
+                        <img src="images/mainReviews/icons-info.png" />
+                      </div>
+                    </div>
+                    <!-- <div class="tastes-reviews">
+                      <img src="images/tastes/five-stars.svg" />
+                      <p class="tastes-reviews_number"><span>495</span> отзывов</p>
+                    </div> -->
+                    <h3 class="main-tastes-name">Индейка с телятиной</h3>
+                    <div class="main-tastes-slider-item-info">
+                      <p class="main-tastes-slider-item-info-for">Для кошек всех возрастов</p>
+                      <p class="main-tastes-slider-item-info-weight">100г</p>
+                    </div>
+                    <p class="main-tastes-slider-item-descr">
+                      <span>Состав:</span> филе индейки, телятина, вода, ягоды годжи, желатин, кокосовое масло, витамины (А, Е, Д), микроэлементы, аминокислоты
+                    </p>
+                    <button class="btn_main btn_main-big w100">Купить (170₽)</button>
+                  </div>
+                </article>
               </div>
+            </div>
 
-              <div class="main-reviews-reviews-slider-item">
-                <div class="main-reviews-reviews-slider-item_inner">
-                  <img src="images/mainReviews/cat2.png" class="main-reviews-reviews_avatar" />
-                  <img src="images/mainReviews/replica2.svg" class='main-reviews-reviews_replica-deck' />
-                  <img src="images/mainReviews/replica-2-mob.svg" class='main-reviews-reviews_replica-mob' />
+            <div class="main-reviews-reviews-column">
+              <p class="main-reviews-reviews-title">Армия котиков-ботиков</p>
+              <div class="main-reviews-reviews-slider">
+                <div class="main-reviews-reviews-slider-item">
+                  <div class="main-reviews-reviews-slider-item_inner">
+                    <img src="images/mainReviews/cat1.png" class="main-reviews-reviews_avatar" />
+                    <img src="images/mainReviews/replica1.svg" class='main-reviews-reviews_replica-deck' />
+                    <img src="images/mainReviews/replica-1-mob.svg" class='main-reviews-reviews_replica-mob' />
+                  </div>
                 </div>
-              </div>
 
-              <div class="main-reviews-reviews-slider-item">
-                <div class="main-reviews-reviews-slider-item_inner">
-                  <img src="images/mainReviews/cat3.png" class="main-reviews-reviews_avatar" />
-                  <img src="images/mainReviews/replica3.svg" class='main-reviews-reviews_replica-deck' />
-                  <img src="images/mainReviews/replica-3-mob.svg" class='main-reviews-reviews_replica-mob' />
+                <div class="main-reviews-reviews-slider-item">
+                  <div class="main-reviews-reviews-slider-item_inner">
+                    <img src="images/mainReviews/cat2.png" class="main-reviews-reviews_avatar" />
+                    <img src="images/mainReviews/replica2.svg" class='main-reviews-reviews_replica-deck' />
+                    <img src="images/mainReviews/replica-2-mob.svg" class='main-reviews-reviews_replica-mob' />
+                  </div>
                 </div>
-              </div>
 
-              <div class="main-reviews-reviews-slider-item">
-                <div class="main-reviews-reviews-slider-item_inner">
-                  <img src="images/mainReviews/cat4.png" class="main-reviews-reviews_avatar" />
-                  <img src="images/mainReviews/replica4.svg" class='main-reviews-reviews_replica-deck' />
-                  <img src="images/mainReviews/replica-4-mob.svg" class='main-reviews-reviews_replica-mob' />
+                <div class="main-reviews-reviews-slider-item">
+                  <div class="main-reviews-reviews-slider-item_inner">
+                    <img src="images/mainReviews/cat3.png" class="main-reviews-reviews_avatar" />
+                    <img src="images/mainReviews/replica3.svg" class='main-reviews-reviews_replica-deck' />
+                    <img src="images/mainReviews/replica-3-mob.svg" class='main-reviews-reviews_replica-mob' />
+                  </div>
                 </div>
-              </div>
 
-              <div class="main-reviews-reviews-slider-item">
-                <div class="main-reviews-reviews-slider-item_inner">
-                  <img src="images/mainReviews/cat2.png" class="main-reviews-reviews_avatar" />
-                  <img src="images/mainReviews/replica5.svg" class='main-reviews-reviews_replica-deck' />
-                  <img src="images/mainReviews/replica-5-mob.svg" class='main-reviews-reviews_replica-mob' />
+                <div class="main-reviews-reviews-slider-item">
+                  <div class="main-reviews-reviews-slider-item_inner">
+                    <img src="images/mainReviews/cat4.png" class="main-reviews-reviews_avatar" />
+                    <img src="images/mainReviews/replica4.svg" class='main-reviews-reviews_replica-deck' />
+                    <img src="images/mainReviews/replica-4-mob.svg" class='main-reviews-reviews_replica-mob' />
+                  </div>
                 </div>
-              </div>
 
-              <div class="main-reviews-reviews-slider-item">
-                <div class="main-reviews-reviews-slider-item_inner">
-                  <img src="images/mainReviews/cat3.png" class="main-reviews-reviews_avatar" />
-                  <img src="images/mainReviews/replica6.svg" class='main-reviews-reviews_replica-deck' />
-                  <img src="images/mainReviews/replica-6-mob.svg" class='main-reviews-reviews_replica-mob' />
+                <div class="main-reviews-reviews-slider-item">
+                  <div class="main-reviews-reviews-slider-item_inner">
+                    <img src="images/mainReviews/cat2.png" class="main-reviews-reviews_avatar" />
+                    <img src="images/mainReviews/replica5.svg" class='main-reviews-reviews_replica-deck' />
+                    <img src="images/mainReviews/replica-5-mob.svg" class='main-reviews-reviews_replica-mob' />
+                  </div>
+                </div>
+
+                <div class="main-reviews-reviews-slider-item">
+                  <div class="main-reviews-reviews-slider-item_inner">
+                    <img src="images/mainReviews/cat3.png" class="main-reviews-reviews_avatar" />
+                    <img src="images/mainReviews/replica6.svg" class='main-reviews-reviews_replica-deck' />
+                    <img src="images/mainReviews/replica-6-mob.svg" class='main-reviews-reviews_replica-mob' />
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="main-reviews-form">
-          <div class="main-reviews-form-form">
-            <div class="main-reviews-form-left">
-              <h3 class="main-reviews-form-title">Оставьте отзыв</h3>
-              <p class="main-reviews-form-descr">Выберите аватар и расскажите о своих впечатлениях о корме WOOW holistic
-              </p>
-              <img src="images/logo-black.svg" />
-            </div>
-            <div class="main-reviews-form-right">
-              <div class="main-reviews-form-avatars">
-                <div class="main-reviews-form-avatar-item main-reviews-form-avatar-item-active">
-                  <img src="images/mainReviews/form/1.png" />
-                </div>
-                <div class="main-reviews-form-avatar-item">
-                  <img src="images/mainReviews/form/2.png" />
-                </div>
-                <div class="main-reviews-form-avatar-item">
-                  <img src="images/mainReviews/form/3.png" />
-                </div>
-                <div class="main-reviews-form-avatar-item">
-                  <img src="images/mainReviews/form/4.png" />
-                </div>
+          <div class="main-reviews-form">
+            <div class="main-reviews-form-form">
+              <div class="main-reviews-form-left">
+                <h3 class="main-reviews-form-title">Оставьте отзыв</h3>
+                <p class="main-reviews-form-descr">Выберите аватар и расскажите о своих впечатлениях о корме WOOW
+                  holistic
+                </p>
+                <img src="images/logo-black.svg" />
               </div>
-              <form action="" class="reviews-form">
-                <input type="text" placeholder="Твоё КОТное имя…" class="form-input"/>
-                <textarea name="" id="" placeholder="Оставьте свой отзыв…" rows="9" class="form-input"></textarea>
-                <button class="btn_main btn_main-big btn_dissabled wfc">Отправить</button>
-              </form>
+              <div class="main-reviews-form-right">
+                <div class="main-reviews-form-avatars">
+                  <div class="main-reviews-form-avatar-item main-reviews-form-avatar-item-active">
+                    <img src="images/mainReviews/form/1.png" />
+                  </div>
+                  <div class="main-reviews-form-avatar-item">
+                    <img src="images/mainReviews/form/2.png" />
+                  </div>
+                  <div class="main-reviews-form-avatar-item">
+                    <img src="images/mainReviews/form/3.png" />
+                  </div>
+                  <div class="main-reviews-form-avatar-item">
+                    <img src="images/mainReviews/form/4.png" />
+                  </div>
+                </div>
+                <form action="" class="reviews-form" id="form">
+                  <div class="">
+                    <input type="text" placeholder="Твоё КОТное имя…" class="form-input _req _name" name='name'/>
+                    <p class="form-input_helper_name form-input_helper">Поле обязательно для заполнения</p>
+                  </div>
+                  <div class="">
+                    <textarea name="" id="" name="descr"  placeholder="Оставьте свой отзыв…" rows="9" class="form-input _req _descr"></textarea>
+                    <p class="form-input_helper_descr form-input_helper">Поле обязательно для заполнения</p>
+                  </div>
+                  
+                  <button class="btn_main btn_main-big btn_dissabled wfc">Отправить</button>
+                </form>
+              </div>
             </div>
           </div>
         </div>
-      </div>
       </div>
     </section>
-    <section class="quality">
+    <section class="quality" id="about">
       <div class="container">
-        <h2 class="quality-title">Качество</h2>
+        <h2 class="quality-title">О нас</h2>
         <div class="quality-main">
           <div class="quality-column">
             <div class="quality-column-img">
@@ -832,17 +885,17 @@
           <div class="footer-nav-column">
             <ul class="footer-nav-list">
               <li class="footer-nav-item">
-                <a href="#">
+                <a href="#features">
                   Преимущества
                 </a>
               </li>
               <li class="footer-nav-item">
-                <a href="#">
+                <a href="#tastes">
                   Вкусы
                 </a>
               </li>
               <li class="footer-nav-item">
-                <a href="#">
+                <a href="#about">
                   О нас
                 </a>
               </li>
@@ -865,6 +918,54 @@
         </div>
       </div>
     </footer>
+
+    <div class="modal">
+      <div class="modal-wrapper">
+        <img src="images/modal-cat.png" class="modal-cat" />
+        <h2 class="modal-title">Выбери удобный маркетплейс</h2>
+        <div class="modal__text"> Все вкусы WooW.holistic доступны на самых популярных маркетплейсах</div>
+        <button type="button" class="btn btn--close-modal">
+
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <rect width="24" height="24" rx="12" />
+            <path
+              d="M3 12C3 7.02944 7.02944 3 12 3V3C16.9706 3 21 7.02944 21 12V12C21 16.9706 16.9706 21 12 21V21C7.02944 21 3 16.9706 3 12V12Z" />
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M6.7045 15.7201C6.26517 16.1594 6.26517 16.8717 6.7045 17.311C7.14384 17.7504 7.85616 17.7504 8.2955 17.311L12.0533 13.5533L15.8111 17.3111C16.2504 17.7504 16.9628 17.7504 17.4021 17.3111C17.8414 16.8717 17.8414 16.1594 17.4021 15.7201L13.6443 11.9623L17.3111 8.29543C17.7504 7.85609 17.7504 7.14378 17.3111 6.70444C16.8718 6.2651 16.1595 6.2651 15.7201 6.70444L12.0533 10.3713L8.38649 6.70448C7.94715 6.26514 7.23483 6.26514 6.7955 6.70448C6.35616 7.14382 6.35616 7.85613 6.7955 8.29547L10.4623 11.9623L6.7045 15.7201Z"
+              fill="#ffffff" />
+          </svg>
+        </button>
+        <div class="modal__link">
+          <a class="modal-link"
+            href="https://www.wildberries.ru/catalog/63825597/detail.aspx?targetUrl=GP&size=112130849WOOW.holistic"
+            target="_blank">
+            <div class="modal-link__inner">
+              <div class="modal-link__img">
+                <img src="images/Wildberries.jpg" alt="">
+              </div>
+              <div class="modal-link__text">Wildberries →</div>
+
+            </div>
+          </a>
+          <!-- <a class="modal-link">
+            <div class="modal-link__inner">
+              <div class="modal-link__img">
+                <img src="images/Yandex.jpg" alt="">
+              </div>
+              <div class="modal-link__text">Я.Маркет →</div>
+            </div>
+          </a> -->
+          <a class="modal-link" target="_blank"
+            href="https://www.ozon.ru/product/korm-dlya-koshek-vlazhnyy-holistik-koshachiy-korm-dlya-sterilizovannyh-dlya-kotyat-489631579/?sh=zuRxyWPJnA&from=share_ios">
+            <div class="modal-link__inner">
+              <div class="modal-link__img"><img src="images/OZON.ru.jpg" alt=""></div>
+              <div class="modal-link__text">Ozon →</div>
+            </div>
+          </a>
+        </div>
+
+      </div>
+    </div>
   </main>
 
   <script src="js/lib.min.js"></script>

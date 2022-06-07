@@ -1,0 +1,167 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 30px;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  pointer-events: none;
+  opacity: 0;
+  z-index: 999;
+
+  &__text {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 143%;
+    text-align: center;
+    width: 70%;
+    margin: 0px auto;
+
+    /* Black */
+
+    color: #000000;
+
+  }
+
+  // modal__link
+  &__link {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+  }
+}
+
+.modal-link {
+  width: 32%;
+  margin-right: 8px;
+  margin-left: 8px;
+}
+
+.modal-wrapper {
+  position: relative;
+  padding: 72px 22px;
+  background-color: #fff;
+  width: 536px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.modal-title {
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  font-family: 'inter-extra-bold';
+  font-size: 16px;
+}
+
+.btn {}
+
+.btn--close-modal {
+  position: absolute;
+  right: 30px;
+  height: 32px;
+  width: 32px;
+  top: 30px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.modal-cat {
+  position: absolute;
+  left: 0;
+  top: 0px
+}
+
+.modal-link {
+  background-color: #7AFF8C;
+  border-radius: 100px;
+  padding: 8px 16px 8px 8px;
+  transition: all 0.3s;
+  cursor: pointer;
+
+  // .modal-link__inner
+
+  &__inner {
+    display: flex;
+    align-items: center;
+  }
+
+  // .modal-link__img
+
+  &__img {
+    width: 32px;
+    height: 32px;
+    overflow: hidden;
+    flex-shrink: 0;
+    border-radius: 50%;
+    margin-right: 8px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+
+    }
+  }
+
+  // .modal-link__text
+
+  &__text {
+    font-size: 14px;
+  }
+
+  // .modal-link__arrows
+
+}
+
+.modal-link:hover{
+  background-color: #CECECE;
+}
+
+.btn:active {
+  opacity: 0.8;
+}
+
+.modal--open {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+
+
+@media (max-width: 600px) {
+  .modal-wrapper {
+    width: 100%;
+  }
+
+  .modal__link {
+    flex-wrap: wrap;
+  }
+
+  .modal-link {
+    width: 49%;
+    margin-bottom: 8px;
+  }
+
+  .modal-cat {
+    display: none;
+  }
+
+}
+
+@media (max-width: 375px) {
+
+  .modal-link {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+
+
+}

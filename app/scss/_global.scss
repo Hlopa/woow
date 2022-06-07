@@ -98,6 +98,16 @@ img {
   width: fit-content;
 }
 
+.btn_dissabled{
+  background-color: #CECECE;
+  box-shadow:none;
+  cursor: default;
+}
+
+.btn_dissabled:hover{
+  background-color: #CECECE;
+}
+
 
 
 //Text
@@ -113,10 +123,17 @@ img {
 
 }
 
+//==========================970px=================================//
+
+@media (max-width: 970px) {
+  .btn_main.wfc{
+    width: 100%;
+  }
+}
+
 //===========================600px=============================//
 
 @media (max-width: 600px) {
-
   .container {
     padding: 0px 24px;
   }

@@ -1,11 +1,11 @@
 .main-reviews {
   background-color: $blueBg;
   padding-top: 60px;
-  
-  
+
+
 }
 
-.main-reviews_inner{
+.main-reviews_inner {
   position: relative;
   padding-bottom: 109px;
 }
@@ -50,6 +50,7 @@
 
 .main-reviews-tastes-column {
   padding: 13px 32px 40px 32px;
+  margin-right: 24px;
 }
 
 .main-tastes-slider-item-img {
@@ -193,12 +194,12 @@
   padding-bottom: 80px;
 }
 
-.main-reviews-reviews_replica-mob{
+.main-reviews-reviews_replica-mob {
   display: none !important;
 }
 
 
-.main-reviews-form-form{
+.main-reviews-form-form {
   background-color: #fff;
   border-radius: 20px;
   padding: 36px 40px 40px 40px;
@@ -206,33 +207,33 @@
   justify-content: space-between;
 }
 
-.main-reviews-form-left{
+.main-reviews-form-left {
   flex-basis: 49%;
 }
 
-.main-reviews-form-right{
+.main-reviews-form-right {
   flex-basis: 49%;
 }
 
-.main-reviews-form-title{
+.main-reviews-form-title {
   font-size: 32px;
   letter-spacing: -0.03em;
   font-family: 'inter-bold';
   margin-bottom: 10px;
 }
 
-.main-reviews-form-descr{
+.main-reviews-form-descr {
   font-size: 20px;
   line-height: 148%;
   margin-bottom: 24px;
 }
 
-.main-reviews-form-avatars{
+.main-reviews-form-avatars {
   display: flex;
   margin-bottom: 16px;
 }
 
-.main-reviews-form-avatar-item{
+.main-reviews-form-avatar-item {
   border-radius: 50%;
   overflow: hidden;
   width: 56px;
@@ -240,58 +241,109 @@
   margin-right: 20px;
   cursor: pointer;
   border: 2px solid #CECECE;
-  img{
+
+  img {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
 }
 
-.main-reviews-form-avatar-item-active{
+.main-reviews-form-avatar-item-active {
   border: 3px solid #FFC115;
 }
 
-.reviews-form{
+.reviews-form {
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
-.form-input{
-margin-bottom: 16px;
-border: 1px solid transparent;
-background-color: #F4F4F4;
-border-radius: 15px;
-padding: 16px 24px;
-resize: none
+.reviews-form::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.7) url('../images/loader.gif') center / 50px no-repeat;
+  opacity: 0;
+  visibility: hidden;
 }
 
-.form-input:focus{
+.reviews-form._sending::after{
+  opacity: 1;
+  visibility: visible;
+}
+
+.form-input {
+  border: 1px solid transparent;
+  background-color: #F4F4F4;
+  border-radius: 15px;
+  padding: 16px 24px;
+  resize: none;
+  font-size: 20px;
+  line-height: 140%;
+  width: 100%;
+}
+
+.form-input_helper{
+  margin-bottom: 14px;
+  padding-left: 8px;
+  font-size: 12px;
+  color: red;
+  opacity: 0;
+}
+
+._error-helper{
+  .form-input_helper{
+    opacity: 1;
+  }
+}
+
+
+.form-input._error{
+  border: 1px solid red;
+}
+
+.form-input:focus {
   border: 1px solid #CECECE;
   outline: transparent;
 }
 
-.form-input:focus-visible{
+.form-input._error:focus{
+  border: 1px solid red;
+}
+
+.form-input:focus-visible {
   border: 1px solid #CECECE;
   outline: transparent;
 }
 
-.form-input::placeholder{
+.form-input._error:focus-visible {
+  border: 1px solid red;
+  outline: transparent;
+}
+
+
+.form-input::placeholder {
   color: #8C8C8C;
   font-size: 20px;
   line-height: 140%;
 }
 
-.big-cat{
+.big-cat {
   position: absolute;
   bottom: 0;
   left: -70px;
 }
 
-.big-cat-replica{
+.big-cat-replica {
   position: absolute;
   bottom: 250px;
   left: 250px;
- animation: roteto2 3s infinite;
+  animation: roteto2 3s infinite;
 }
 
 
@@ -304,8 +356,17 @@ resize: none
   .main-reviews-tastes-column {
     display: none;
   }
-  .main-reviews-reviews-column{
-     flex-basis: 100%;
+
+  .main-reviews-reviews-column {
+    flex-basis: 100%;
+  }
+
+  .big-cat {
+    display: none;
+  }
+
+  .big-cat-replica {
+    display: none;
   }
 }
 
@@ -314,11 +375,21 @@ resize: none
 
 @media (max-width: 970px) {
   .main-reviews-title {
-    
     font-size: 28px;
     width: 100%;
     width: 85%;
     margin-bottom: 36px;
+  }
+
+  .main-reviews-form-left {
+    img {
+      display: none;
+    }
+  }
+
+  .main-reviews-form-form {
+    flex-direction: column;
+
   }
 }
 
@@ -326,41 +397,89 @@ resize: none
 //=========================600px==============================//
 
 @media (max-width: 600px) {
-  .main-reviews{
+  .main-reviews {
     padding-top: 40px;
   }
+
   .main-reviews-reviews {
     padding-bottom: 40px;
-}
-.main-reviews-reviews-title{
-  display: none;
-}
-.main-reviews-reviews_avatar{
-  width: 40px;
-  height: 40px;
-}
-.main-reviews-reviews_replica-mob{
-  display: block !important;
-}
+  }
 
-.main-reviews-reviews_replica-deck{
-  display: none !important;
-}
+  .main-reviews-reviews-title {
+    display: none;
+  }
+
+  .main-reviews-reviews_avatar {
+    width: 40px;
+    height: 40px;
+  }
+
+  .main-reviews-reviews_replica-mob {
+    display: block !important;
+  }
+
+  .main-reviews-reviews_replica-deck {
+    display: none !important;
+  }
+  .main-reviews-form-form{
+    background-color: transparent;
+    padding: 0;
+    textarea{
+      margin-bottom: 16px;
+    }
+  }
+
+  .main-reviews-form-title{
+    font-size: 24px;
+    text-transform: capitalize;
+    letter-spacing: 0;
+    font-family: 'inter-medium';
+    margin-bottom: 4px;
+  }
+
+  .main-reviews-form-descr{
+    font-size: 14px;
+    line-height: 157%;
+    margin-bottom: 24px;
+  }
+
+  .main-reviews-form-avatar-item{
+    width: 40px;
+    height: 40px;
+    margin-right: 8px;
+  }
+
+  .form-input{
+    margin-bottom: 8px;
+    border: 1px solid transparent;
+    background-color: #fff;
+    padding: 10px 16px;
+    font-size: 16px;
+    line-height: 152%;
+    
+    }
+    .form-input::placeholder{
+      font-size: 16px;
+      line-height: 152%;
+    }
+
 }
 
 
 //===============================410px==========================//
 
 @media (max-width: 410px) {
-  .main-reviews-reviews_replica-mob{
+  .main-reviews-reviews_replica-mob {
     margin-left: -11px;
   }
-  .main-reviews-reviews_avatar{
-width: 32px;
-height: 32px;
+
+  .main-reviews-reviews_avatar {
+    width: 32px;
+    height: 32px;
   }
-  .main-reviews-title{
-width: 100%;
+
+  .main-reviews-title {
+    width: 100%;
   }
 }
 
@@ -368,8 +487,7 @@ width: 100%;
 
 
 @media (max-width: 370px) {
-  .main-reviews-reviews-slider{
+  .main-reviews-reviews-slider {
     margin-left: -20px;
   }
 }
-
