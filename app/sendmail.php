@@ -1,44 +1,52 @@
 <?php
-  use PHPMailer\PHPMailer\PHPMailer;
-  use PHPMailer\PHPMailer\Exeption;
 
-  require 'phpmailer/src/Exception.php';
-  require 'phpmailer/src/PHPMailer.php';
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exсeption;
+use PHPMailer\PHPMailer\SMTP;
 
+require 'phpmailer/src/Exception.php';
+require 'phpmailer/src/PHPMailer.php';
+require 'phpmailer/src/SMTP.php';
 
-  $mail = new PHPMailer(true);
-  $mail->CharSet = 'UTF-8';
-  $mail->setLanguage('ru', 'phpmailer/language/');
-  $mail->IsHTML(true);
+$mail = new PHPMailer(true);
+$mail->CharSet = 'UTF-8';
 
-  //Кому отправить
-  $mail->addAddress('test@mail.ru');
-  //Тема письма
-  $mail->Subject = 'Форма обратной связи с Woow.holistic';
+$mail->isSMTP();
+$mail->Host = 'smtp.mail.ru';
+$mail->SMTPAuth = true;
+$mail->Username = 'woowholistic_reviews@mail.ru';
+$mail->Password = 'rZGs4DiPfbmR2yvWMtNe';
+$mail->SMTPSecure = 'ssl';
+$mail->Port = 465;
 
-  
-  //Тело письма
-  if(trim(!empty($_POST['name']))){
-    $body.='<p><strong>Имя:</strong>'.$_POST['name'].'</p>';
-  }
+$mail->setFrom('woowholistic_reviews@mail.ru');
+$mail->addAddress('woowholistic_reviews@mail.ru');
+$mail->isHTML(true);
 
-  if(trim(!empty($_POST['descr']))){
-    $body.='<p><strong>Отзыв:</strong>'.$_POST['descr'].'</p>';
-  }
+$mail->Subject = 'Форма обратной связи с Woow.holistic';
 
-  $mail->Body = $body;
+//Тело письма
+if(trim(!empty($_POST['name']))){
+  $body.='<p><strong>Имя:</strong> '.$_POST['name'].'</p>';
+}
 
-  //Отправялем
-  if(!$mail->send()){
-    $message = 'Ошибка';
-  } else {
-    $message = 'Данные отправлены!';
-  }
+if(trim(!empty($_POST['descr']))){
+  $body.='<p><strong>Отзыв:</strong> '.$_POST['descr'].'</p>';
+}
 
-  $response = ['message' => $message];
+$mail->Body = $body;
+$mail->AltBody = '';
 
-  header('Content-type: application/json');
-  echo json_encode($response);
+//Отправялем
+if(!$mail->send()){
+  $message = 'Ошибка';
+} else {
+  $message = 'Данные отправлены!';
+}
 
-  ?>
+$response = ['message' => $message];
 
+header('Content-type: application/json');
+echo json_encode($response);
+
+?>

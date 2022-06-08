@@ -257,6 +257,8 @@ document.addEventListener("DOMContentLoaded", () => {
   //отправка отзыва на почту
 
   const form = document.getElementById('form');
+  const button = document.getElementById('form-btn');
+
 
   form.addEventListener('submit', formSend);
 
@@ -266,8 +268,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let formData = new FormData(form);
 
+ 
+
     if (error === 0) {
-      form.classList.add('_sending')
+      form.classList.add('_sending');
       let response = await fetch('sendmail.php', {
         method: 'POST',
         body: formData
@@ -300,19 +304,20 @@ document.addEventListener("DOMContentLoaded", () => {
         error++;
       }
     }
-
     return error
-
   }
 
   function formAddError(input) {
     input.parentElement.classList.add('_error-helper');
     input.classList.add('_error');
+    button.classList.add('btn_dissabled')
+
   }
 
   function formRemoveError(input) {
     input.parentElement.classList.remove('_error-helper');
     input.classList.remove('_error');
+    button.classList.remove('btn_dissabled')
   }
 
 
