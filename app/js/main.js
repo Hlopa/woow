@@ -1,122 +1,191 @@
 'use scrict';
 
 document.addEventListener("DOMContentLoaded", () => {
-  //Функция для смены стилей хедера при скролле
+
+  const main = document.querySelector('.main');
+  const history = document.querySelector('.history');
+
+  //modal
+
+  let btnOpen = document.querySelectorAll('.btn--open-modal');
+  let btnClose = document.querySelector('.btn--close-modal');
+  let modal = document.querySelector('.modal');
+
+
+  btnOpen.forEach((item) => {
+    item.addEventListener('click', function (e) {
+      modal.classList.add('modal--open');
+      burger.classList.remove('menu-burger__active');
+      menuBody.classList.remove('header__menu-body--show');
+    })
+  })
+
+  btnClose.addEventListener('click', function (e) {
+    modal.classList.remove('modal--open');
+  });
+
+
+  //==============================================Main page=======================================//
+
+  if (main) {
+
+     //Функция для смены стилей хедера при скролле
   $(window).on("scroll", function () {
     $('.header').toggleClass("active", $(this).scrollTop() > 200);
   });
 
-  //sliders
-  $('.reviews-slider').slick({
-    slidesToShow: 5,
-    slidesToScroll: 1,
-    arrows: false,
-    dots: false,
-    infinite: true,
-    autoplay: true,
-    speed: 8000,
-    autoplaySpeed: 0,
-    cssEase: "linear",
-    pauseOnHover: false,
-    accessibility: false,
-    responsive: [
-      {
-        breakpoint: 2300,
-        settings: {
-          slidesToShow: 3.4,
-        }
-      },
-      {
-        breakpoint: 1380,
-        settings: {
-          slidesToShow: 2,
-        }
-      },
-      {
-        breakpoint: 800,
-        settings: {
-          slidesToShow: 1.5,
-        }
-      },
-      {
-        breakpoint: 620,
-        settings: {
-          slidesToShow: 1,
-        }
-      },
-      {
-        breakpoint: 400,
-        settings: {
-          slidesToShow: 0.7,
-        }
-      },
-    ]
-  });
+  //плавный скролл при клике на меню
 
-  $('.tastes_slider').slick({
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    arrows: true,
-    dots: false,
-    infinite: false,
-    prevArrow: '<div class="arrow arrow-left"><img class="slider-arrows slider-arrows__left tastes-slider-arrows" src="images/tastes/prev-arrow.svg" alt=""></img></div>',
-    nextArrow: '<div class="arrow arrow-right"><img class="slider-arrows slider-arrows__right tastes-slider-arrows" src="images/tastes/next-arrow.svg" alt=""></img></div>',
-    responsive: [
-      {
-        breakpoint: 1290,
-        settings: {
-          slidesToShow: 3,
-          arrows: false,
-          dots: true,
-        }
-      },
-      {
-        breakpoint: 970,
-        settings: {
-          slidesToShow: 2,
-          arrows: false,
-          dots: true,
-        }
-      },
-      {
-        breakpoint: 690,
-        settings: {
-          slidesToShow: 1,
-          arrows: false,
-          dots: true,
-        }
-      },
-    ]
-  });
+  const menuList = document.querySelector('.header__menu-list');
 
-  $('.main-tastes-slider').slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: true,
-    dots: true,
-    infinite: false,
-    prevArrow: '<div class="arrow arrow-left"><img class="slider-arrows slider-arrows__left reviews-slider-arrows" src="images/tastes/prev-arrow.svg" alt=""></img></div>',
-    nextArrow: '<div class="arrow arrow-right"><img class="slider-arrows slider-arrows__right reviews-slider-arrows" src="images/tastes/next-arrow.svg" alt=""></img></div>',
-  });
+  const getSmoothScroll = () => {
+    const ancors = menuList.querySelectorAll('a');
+    const menuListItem = document.querySelectorAll('.header__menu-item');
 
-  $('.main-reviews-reviews-slider').slick({
-    slidesToShow: 4,
-    slidesToScroll: -1,
-    arrows: false,
-    dots: false,
-    vertical: true,
-    infinite: true,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    cssEase: "linear",
-    accessibility: false,
-    pauseOnHover: false,
+    const getScroll = (element) => {
+      element.addEventListener('click', function (e) {
+        e.preventDefault();
+        const blockID = element.getAttribute('href');
+        document.querySelector('' + blockID).scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+        burger.classList.toggle('menu-burger__active');
+        menuBody.classList.toggle('header__menu-body--show');
+      })
+    }
 
-  });
+    ancors.forEach((item) => {
+      getScroll(item);
+    });
+
+    menuListItem.forEach((item) => {
+      item.addEventListener('click', function (e) {
+        burger.classList.remove('menu-burger__active');
+        menuBody.classList.remove('header__menu-body--show');
+      })
+    });
+  }
+
+  getSmoothScroll();
+
+  //Открытие бургер-меню
+  const burger = document.querySelector('.menu-burge_root'),
+    menuBody = document.querySelector('.header__menu-body');
+
+  burger.addEventListener('click', () => {
+    burger.classList.toggle('menu-burger__active');
+    menuBody.classList.toggle('header__menu-body--show');
+  })
+
+    //sliders
+    $('.reviews-slider').slick({
+      slidesToShow: 5,
+      slidesToScroll: 1,
+      arrows: false,
+      dots: false,
+      infinite: true,
+      autoplay: true,
+      speed: 8000,
+      autoplaySpeed: 0,
+      cssEase: "linear",
+      pauseOnHover: false,
+      accessibility: false,
+      responsive: [
+        {
+          breakpoint: 2300,
+          settings: {
+            slidesToShow: 3.4,
+          }
+        },
+        {
+          breakpoint: 1380,
+          settings: {
+            slidesToShow: 2,
+          }
+        },
+        {
+          breakpoint: 800,
+          settings: {
+            slidesToShow: 1.5,
+          }
+        },
+        {
+          breakpoint: 620,
+          settings: {
+            slidesToShow: 1,
+          }
+        },
+        {
+          breakpoint: 400,
+          settings: {
+            slidesToShow: 0.7,
+          }
+        },
+      ]
+    });
+
+    $('.tastes_slider').slick({
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      arrows: true,
+      dots: false,
+      infinite: false,
+      prevArrow: '<div class="arrow arrow-left"><img class="slider-arrows slider-arrows__left tastes-slider-arrows" src="images/tastes/prev-arrow.svg" alt=""></img></div>',
+      nextArrow: '<div class="arrow arrow-right"><img class="slider-arrows slider-arrows__right tastes-slider-arrows" src="images/tastes/next-arrow.svg" alt=""></img></div>',
+      responsive: [
+        {
+          breakpoint: 1290,
+          settings: {
+            slidesToShow: 3,
+            arrows: false,
+            dots: true,
+          }
+        },
+        {
+          breakpoint: 970,
+          settings: {
+            slidesToShow: 2,
+            arrows: false,
+            dots: true,
+          }
+        },
+        {
+          breakpoint: 690,
+          settings: {
+            slidesToShow: 1,
+            arrows: false,
+            dots: true,
+          }
+        },
+      ]
+    });
+
+    $('.main-tastes-slider').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: true,
+      dots: true,
+      infinite: false,
+      prevArrow: '<div class="arrow arrow-left"><img class="slider-arrows slider-arrows__left reviews-slider-arrows" src="images/tastes/prev-arrow.svg" alt=""></img></div>',
+      nextArrow: '<div class="arrow arrow-right"><img class="slider-arrows slider-arrows__right reviews-slider-arrows" src="images/tastes/next-arrow.svg" alt=""></img></div>',
+    });
+
+    $('.main-reviews-reviews-slider').slick({
+      slidesToShow: 4,
+      slidesToScroll: -1,
+      arrows: false,
+      dots: false,
+      vertical: true,
+      infinite: true,
+      autoplay: true,
+      autoplaySpeed: 3000,
+      cssEase: "linear",
+      accessibility: false,
+      pauseOnHover: false,
+    });
 
 
-
-  setInterval(() => {
     //скролл и анимация
     let isScrolling = false;
     let featuresFirst = document.querySelector('.features_first');
@@ -168,153 +237,95 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
 
+    //отправка отзыва на почту
 
-    //плавный скролл при клике на меню
+    const form = document.getElementById('form');
+    const button = document.getElementById('form-btn');
 
-    const menuList = document.querySelector('.header__menu-list');
+    form.addEventListener('submit', formSend);
+
+    async function formSend(e) {
+      e.preventDefault()
+      let error = formValidate(form);
+
+      let formData = new FormData(form);
 
 
-    const getSmoothScroll = () => {
-      const ancors = menuList.querySelectorAll('a');
-      const menuListItem = document.querySelectorAll('.header__menu-item');
-
-      const getScroll = (element) => {
-        element.addEventListener('click', function (e) {
-          e.preventDefault();
-          const blockID = element.getAttribute('href');
-          document.querySelector('' + blockID).scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-          });
-          burger.classList.toggle('menu-burger__active');
-          menuBody.classList.toggle('header__menu-body--show');
+      if (error === 0) {
+        form.classList.add('_sending');
+        let response = await fetch('sendmail.php', {
+          method: 'POST',
+          body: formData
         })
-      }
 
-      ancors.forEach((item) => {
-        getScroll(item);
-      });
-
-      menuListItem.forEach((item) => {
-        item.addEventListener('click', function (e) {
-          burger.classList.remove('menu-burger__active');
-          menuBody.classList.remove('header__menu-body--show');
-        })
-      });
-
-
-    }
-
-    getSmoothScroll();
-
-
-  }, 2000)
-
-  //Открытие бургер-меню
-  const burger = document.querySelector('.menu-burge_root'),
-    menuBody = document.querySelector('.header__menu-body');
-
-  burger.addEventListener('click', () => {
-    burger.classList.toggle('menu-burger__active');
-    menuBody.classList.toggle('header__menu-body--show');
-  })
-
-
-  //выбор аватара в форме 
-
-  const avatars = document.querySelectorAll('.main-reviews-form-avatar-item');
-
-  avatars.forEach((avatar) => {
-    avatar.addEventListener('click', function (e) {
-      avatars.forEach((item) => {
-        item.classList.remove('main-reviews-form-avatar-item-active')
-      })
-      avatar.classList.toggle('main-reviews-form-avatar-item-active')
-    })
-  })
-
-  //modal
-
-  let btnOpen = document.querySelectorAll('.btn--open-modal');
-  let btnClose = document.querySelector('.btn--close-modal');
-  let modal = document.querySelector('.modal');
-
-
-  btnOpen.forEach((item) => {
-    item.addEventListener('click', function (e) {
-      modal.classList.add('modal--open');
-      burger.classList.remove('menu-burger__active');
-      menuBody.classList.remove('header__menu-body--show');
-    })
-  })
-
-  btnClose.addEventListener('click', function (e) {
-    modal.classList.remove('modal--open');
-  });
-
-
-
-  //отправка отзыва на почту
-
-  const form = document.getElementById('form');
-
-  form.addEventListener('submit', formSend);
-
-  async function formSend(e) {
-    e.preventDefault()
-    let error = formValidate(form);
-
-    let formData = new FormData(form);
-
-    if (error === 0) {
-      form.classList.add('_sending')
-      let response = await fetch('sendmail.php', {
-        method: 'POST',
-        body: formData
-      })
-
-      if (response.ok) {
-        let result = await response.json();
-        alert(result.message);
-        form.reset();
-        form.classList.remove('_sending')
-      } else { 
-        alert('Ошибка')
-        form.classList.remove('_sending')
-       }
-    } else {
-      return
-    }
-  }
-
-  function formValidate(form) {
-    let error = 0;
-    let formReq = document.querySelectorAll('._req');
-
-    for (let index = 0; index < formReq.length; index++) {
-      const input = formReq[index];
-      formRemoveError(input);
-
-      if (input.value === '') {
-        formAddError(input)
-        error++;
+        if (response.ok) {
+          let result = await response.json();
+          alert(result.message);
+          form.reset();
+          form.classList.remove('_sending')
+        } else {
+          alert('Ошибка')
+          form.classList.remove('_sending')
+        }
+      } else {
+        return
       }
     }
 
-    return error
+    function formValidate(form) {
+      let error = 0;
+      let formReq = main.querySelectorAll('._req');
+
+      for (let index = 0; index < formReq.length; index++) {
+        const input = formReq[index];
+        formRemoveError(input);
+
+        if (input.value === '') {
+          formAddError(input)
+          error++;
+        }
+      }
+      return error
+    }
+
+    function formAddError(input) {
+      input.parentElement.classList.add('_error-helper');
+      input.classList.add('_error');
+      button.classList.add('btn_dissabled')
+    }
+
+    function formRemoveError(input) {
+      input.parentElement.classList.remove('_error-helper');
+      input.classList.remove('_error');
+      button.classList.remove('btn_dissabled')
+    }
+
+    //выбор аватара в форме 
+
+    const avatars = main.querySelectorAll('.main-reviews-form-avatar-item');
+
+    avatars.forEach((avatar) => {
+      avatar.addEventListener('click', function (e) {
+        avatars.forEach((item) => {
+          item.classList.remove('main-reviews-form-avatar-item-active')
+        })
+        avatar.classList.toggle('main-reviews-form-avatar-item-active')
+      })
+    })
 
   }
 
-  function formAddError(input) {
-    input.parentElement.classList.add('_error-helper');
-    input.classList.add('_error');
-  }
+  //===================================History Page =================================//
 
-  function formRemoveError(input) {
-    input.parentElement.classList.remove('_error-helper');
-    input.classList.remove('_error');
-  }
+  if (history) {
 
+    ///Мигание лампочки на странице истории
+    const lamp = history.querySelector('.about-fourth-lamp');
+
+    setInterval(() => {
+      lamp.classList.toggle('about-fourth-lamp-active')
+    }, 1000)
+  }
 
 })
 

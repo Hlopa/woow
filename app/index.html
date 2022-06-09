@@ -125,7 +125,7 @@
       </div>
     </div>
   </header>
-  <main>
+  <main class="main">
     <section class="first_screen">
       <div class="first_screen-inner">
         <div class="container">
@@ -148,7 +148,10 @@
               <img src="images/firstScreen/textLegend.svg" />
             </div>
             <div class="first_screen-cat-replica">
-              <img src="images/firstScreen/replica.svg" />
+              <a href="history.html">
+                  <img src="images/firstScreen/replica.svg" />
+              </a>
+            
             </div>
           </div>
         </div>
@@ -802,18 +805,18 @@
                     <img src="images/mainReviews/form/4.png" />
                   </div>
                 </div>
-                <form action="" class="reviews-form" id="form">
+                <form action="#" class="reviews-form" id="form">
                   <div class="">
                     <input type="text" placeholder="Твоё КОТное имя…" class="form-input _req _name" name='name' />
                     <p class="form-input_helper_name form-input_helper">Поле обязательно для заполнения</p>
                   </div>
                   <div class="">
-                    <textarea name="" id="" name="descr" placeholder="Оставьте свой отзыв…" rows="9"
+                    <textarea name="descr" placeholder="Оставьте свой отзыв…" rows="9"
                       class="form-input _req _descr"></textarea>
                     <p class="form-input_helper_descr form-input_helper">Поле обязательно для заполнения</p>
                   </div>
     
-                  <button class="btn_main btn_main-big btn_dissabled wfc">Отправить</button>
+                  <button class="btn_main btn_main-big wfc" id="form-btn" type="submit">Отправить</button>
                 </form>
               </div>
             </div>

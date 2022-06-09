@@ -1,0 +1,91 @@
+.history_header{
+  position: absolute;
+  top: 0
+}
+
+.history__first_screen{
+  background-image: url(../images/firstScreen/desc.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 900px;
+  padding-top: 80px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.history_first-screen-text{
+  width: 62%;
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.history__topIcons{
+  padding-top: 32px;
+  margin-left: -14px;
+  text-align: center;
+  width: 100%;
+}
+
+.history__first_screen-title{
+  color: $green;
+  text-transform: uppercase;
+  font-size: 72px;
+  line-height: 100%;
+  font-family: "SF-Pro-Rounded-black";
+  margin-bottom: 12px;
+  letter-spacing: -0.01em;
+}
+
+.history__first_screen-descr{
+  color: #fff;
+  font-size: 20px;
+  line-height: 140%;
+  width: 80%;
+}
+
+.history__first_screen-bottomText{
+  width: 62%;
+  margin-left: auto;
+  margin-top: auto;
+}
+
+.history__first_screen-bottomText-text{
+  color: #fff;
+  font-family: 'inter-medium';
+  margin-bottom: 6px;
+  
+
+}
+
+.history__first_screen-bottomText-author{
+  color: #fff;
+  font-family: 'inter-medium';
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+
+.history__first_screen-cat{
+  position: absolute;
+  left: 0px;
+  bottom: 0;
+  display: block;
+}
+
+.history__first_screen-inner{
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  padding-bottom: 58px;
+}
+
+.history__first_screen-cat-replica{
+  position: absolute;
+  left: 270px;
+  top: 39%;
+  animation: roteto4 4s infinite;
+  cursor: pointer;
+}

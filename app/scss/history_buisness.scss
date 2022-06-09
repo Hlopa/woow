@@ -1,0 +1,39 @@
+.business{
+  background-color: $orange;
+  padding-top: 200px;
+  height: 1024px;
+  position: relative;
+}
+
+.business-title{
+  font-size: 56px;
+  color: #fff;
+  font-family: 'inter-Black';
+  margin-bottom: 8px;
+  text-transform: capitalize;
+}
+
+.business-descr{
+  color: #fff;
+  font-size: 20px;
+  line-height: 130%;
+  width: 45%;
+}
+
+.business-img-cat{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.business-img-tastes{
+  position: absolute;
+  top: 85px;
+  right: 300px;
+}
+
+.business-img-logo{
+  position: absolute;
+  bottom: 300px;
+  left: 300px
+}
