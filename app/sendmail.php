@@ -11,13 +11,9 @@ require 'phpmailer/src/SMTP.php';
 $mail = new PHPMailer(true);
 $mail->CharSet = 'UTF-8';
 
-$mail->isSMTP();
-$mail->Host = 'smtp.mail.ru';
-$mail->SMTPAuth = true;
-$mail->Username = 'woowholistic_reviews@mail.ru';
-$mail->Password = 'rZGs4DiPfbmR2yvWMtNe';
-$mail->SMTPSecure = 'ssl';
-$mail->Port = 465;
+
+//Вставить блок из mailKeys.txt
+
 
 $mail->setFrom('woowholistic_reviews@mail.ru');
 $mail->addAddress('woowholistic_reviews@mail.ru');
