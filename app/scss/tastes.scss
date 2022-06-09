@@ -247,41 +247,6 @@ height: 100%;
 }
 
 
-@keyframes roteto3 {
-  0% {
-    transform: rotate(0deg);
-    transform-origin: bottom right;
-  }
-
-  50% {
-    transform: rotate(15deg);
-    transform-origin: bottom right;
-  }
-
-  100% {
-    transform: rotate(0deg);
-    transform-origin: bottom right;
-  }
-}
-
-@keyframes rotetoReverse {
-  0% {
-    transform: rotate(15deg);
-    transform-origin: bottom right;
-  }
-
-  50% {
-    transform: rotate(0deg);
-    transform-origin: bottom right;
-  }
-
-  100% {
-    transform: rotate(15deg);
-    transform-origin: bottom right;
-  }
-}
-
-
 //=============================1290px==============================//
 
 @media (max-width: 1290px) {

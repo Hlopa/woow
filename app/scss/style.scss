@@ -1,6 +1,7 @@
 @import '_fonts';
 @import '_vars';
 @import '_global';
+@import '_animation';
 @import 'modal';
 @import 'header';
 @import 'first-screen';
@@ -12,3 +13,7 @@
 @import 'main-reviews';
 @import 'quality';
 @import 'footer';
+
+@import 'history_first-screen';
+@import 'history_about';
+@import 'history_buisness';

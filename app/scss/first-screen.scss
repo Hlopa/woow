@@ -1,5 +1,5 @@
 .first_screen {
-  background-image: url(../images/firstScreen/story-fon.jpg);
+  background-image: url(../images/firstScreen/desc.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -74,23 +74,6 @@
   display: none;
 }
 
-
-@keyframes roteto {
-  0% {
-    transform: rotate(0deg);
-    transform-origin: top right;
-  }
-
-  50% {
-    transform: rotate(15deg);
-    transform-origin: top right;
-  }
-
-  100% {
-    transform: rotate(0deg);
-    transform-origin: top right;
-  }
-}
 
 //=========================1200px==========================//
 
