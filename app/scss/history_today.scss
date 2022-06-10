@@ -1,0 +1,42 @@
+.today{
+  height: 1024px;
+  background-image: url(../images/history/today/bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding-top: 200px;
+  padding-bottom: 50px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+
+.today_title{
+  color: #fff;
+  text-transform: capitalize;
+  font-size: 56px;
+  font-family: 'inter-Black';
+  margin-bottom: 6px;
+}
+
+.today_descr{
+  font-size: 20px;
+  line-height: 130%;
+  font-family: 'inter-semi-bold';
+  margin-bottom: 56px;
+  color: #fff;
+  width: 50%;
+}
+
+.today_cat{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 50;
+}
+
+.today_slider-root{
+ z-index: 51;
+}

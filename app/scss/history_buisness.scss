@@ -9,7 +9,7 @@
   font-size: 56px;
   color: #fff;
   font-family: 'inter-Black';
-  margin-bottom: 8px;
+  margin-bottom: 5px;
   text-transform: capitalize;
 }
 
@@ -29,11 +29,35 @@
 .business-img-tastes{
   position: absolute;
   top: 85px;
-  right: 300px;
+  right: 330px;
 }
 
 .business-img-logo{
   position: absolute;
-  bottom: 300px;
-  left: 300px
+  bottom: 290px;
+  left: 160px
+}
+
+.business-img-eyes{
+  position: absolute;
+  right: 260px;
+  top: 513px;
+}
+
+.business-salmon{
+  position: absolute;
+  bottom: 50px;
+  left: 30%
+}
+
+.business-chicken{
+  position: absolute;
+  left: 10%;
+  top: 45%
+}
+
+.buisiness-shrimp{
+  position: absolute;
+  left: 48%;
+  top: 50%;
 }
