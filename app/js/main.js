@@ -383,38 +383,24 @@ document.addEventListener("DOMContentLoaded", () => {
       pauseOnHover: false, 
       prevArrow: '<div class="arrow arrow-left"><img class="slider-arrows slider-arrows__left thirdAbout-slider-arrows" src="images/tastes/prev-arrow.svg" alt=""></img></div>',
       nextArrow: '<div class="arrow arrow-right"><img class="slider-arrows slider-arrows__right thirdAbout-slider-arrows" src="images/tastes/next-arrow.svg" alt=""></img></div>',
-      // responsive: [
-      //   {
-      //     breakpoint: 2300,
-      //     settings: {
-      //       slidesToShow: 3.4,
-      //     }
-      //   },
-      //   {
-      //     breakpoint: 1380,
-      //     settings: {
-      //       slidesToShow: 2,
-      //     }
-      //   },
-      //   {
-      //     breakpoint: 800,
-      //     settings: {
-      //       slidesToShow: 1.5,
-      //     }
-      //   },
-      //   {
-      //     breakpoint: 620,
-      //     settings: {
-      //       slidesToShow: 1,
-      //     }
-      //   },
-      //   {
-      //     breakpoint: 400,
-      //     settings: {
-      //       slidesToShow: 0.7,
-      //     }
-      //   },
-      // ]
+      responsive: [
+        {
+          breakpoint: 1150,
+          settings: {
+            slidesToShow: 1,
+            centerMode: true,
+          }
+        },
+        {
+          breakpoint: 650,
+          settings: {
+            slidesToShow: 1,
+            centerMode: true,
+            arrows: false,
+            dots: true,
+          }
+        },
+      ]
     });
   }
 
