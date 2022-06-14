@@ -1,4 +1,4 @@
-.today{
+.today {
   height: 1024px;
   background-image: url(../images/history/today/bg.png);
   background-repeat: no-repeat;
@@ -13,7 +13,7 @@
 
 }
 
-.today_title{
+.today_title {
   color: #fff;
   text-transform: capitalize;
   font-size: 56px;
@@ -21,7 +21,7 @@
   margin-bottom: 6px;
 }
 
-.today_descr{
+.today_descr {
   font-size: 20px;
   line-height: 130%;
   font-family: 'inter-semi-bold';
@@ -30,13 +30,62 @@
   width: 50%;
 }
 
-.today_cat{
+.today_cat {
   position: absolute;
   right: 0;
   bottom: 0;
   z-index: 50;
 }
 
-.today_slider-root{
- z-index: 51;
+.today_slider-root {
+  z-index: 51;
+}
+
+
+//======================950px======================//
+
+
+@media (max-width: 950px) {
+  .today {
+    height: 812px;
+    padding-top: 56px;
+    padding-bottom: 0px;
+
+    button {
+      display: none;
+    }
+  }
+
+  .today_cat {
+    height: 537px;
+    object-fit: contain;
+    object-position: bottom right;
+  }
+
+  .today_title {
+    font-size: 40px;
+    margin-bottom: 8px;
+  }
+
+  .today_descr {
+    font-size: 16px;
+    line-height: 150%;
+    font-family: 'inter';
+    width: 80%;
+  }
+
+  .today_slider-item {
+    img {
+      height: 180px;
+    }
+
+  }
+}
+
+//==========================410px======================//
+
+@media (max-width: 410px) {
+  .today_descr {
+    width: 100%;
+  }
 }

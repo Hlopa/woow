@@ -358,18 +358,7 @@ document.addEventListener("DOMContentLoaded", () => {
             slidesToShow: 1.5,
           }
         },
-        {
-          breakpoint: 620,
-          settings: {
-            slidesToShow: 1,
-          }
-        },
-        {
-          breakpoint: 400,
-          settings: {
-            slidesToShow: 0.7,
-          }
-        },
+     
       ]
     });
 
