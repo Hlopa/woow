@@ -246,6 +246,10 @@ height: 100%;
   left: -55px;
 }
 
+.tastes-btn-mobile{
+  display: none;
+}
+
 
 //=============================1290px==============================//
 
@@ -292,6 +296,11 @@ height: 100%;
 @media (max-width: 690px) {
   .tastes .btn_main{
     display: none;
+  }
+
+  .tastes-btn-mobile{
+    display: block !important;
+    width: 100%;
   }
 
   .tastes {

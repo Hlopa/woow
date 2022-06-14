@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const menuList = document.querySelector('.header__menu-list');
 
   const getSmoothScroll = () => {
-    const ancors = menuList.querySelectorAll('a');
+    const ancors = menuList.querySelectorAll('.header__menu-link-ancor');
     const menuListItem = document.querySelectorAll('.header__menu-item');
 
     const getScroll = (element) => {
