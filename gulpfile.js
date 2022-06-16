@@ -73,7 +73,7 @@ function jslib() {
 function images() {
     return src('app/images/**/*')
         .pipe(webp({
-            quality: 99
+            quality: 85
         }))
         .pipe(dest('dist/images'))
         .pipe(src('app/images/**/*'))
