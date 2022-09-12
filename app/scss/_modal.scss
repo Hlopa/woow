@@ -34,13 +34,15 @@
   width: 32%;
   margin-right: 8px;
   margin-left: 8px;
+  position: relative;
+  z-index: 10;
 }
 
 .modal-wrapper {
   position: relative;
   padding: 72px 22px;
   background-color: #fff;
-  width: 536px;
+  width:675px;
   border-radius: 20px;
   text-align: center;
 }
