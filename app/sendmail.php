@@ -3,20 +3,28 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exсeption;
 use PHPMailer\PHPMailer\SMTP;
+use Exception;
 
 require 'phpmailer/src/Exception.php';
 require 'phpmailer/src/PHPMailer.php';
 require 'phpmailer/src/SMTP.php';
 
 $mail = new PHPMailer(true);
+try {
 $mail->CharSet = 'UTF-8';
 
+$mail->isSMTP();
 
-//Вставить блок из mailKeys.txt
+$mail->Host = 'mail.netangels.ru';
+$mail->SMTPAuth = true;
+$mail->Username = 'no-replay@woowholistic.ru';
+$mail->Password = '9yXeMpmJoVndANW';
+$mail->Port = 25 ;
 
 
-$mail->setFrom('woowholistic_reviews@mail.ru');
-$mail->addAddress('woowholistic_reviews@mail.ru');
+$mail->setFrom('no-replay@woowholistic.ru');
+$mail->addAddress('woowholistic@yandex.ru');
+
 $mail->isHTML(true);
 
 $mail->Subject = 'Форма обратной связи с Woow.holistic';
@@ -34,10 +42,11 @@ $mail->Body = $body;
 $mail->AltBody = '';
 
 //Отправялем
-if(!$mail->send()){
-  $message = 'Ошибка';
-} else {
-  $message = 'Данные отправлены!';
+$mail->send();
+$message='Отправлено.';
+}
+catch(Exception $e){
+    $message='Произошла ошибка, попробуйте позже.';
 }
 
 $response = ['message' => $message];
